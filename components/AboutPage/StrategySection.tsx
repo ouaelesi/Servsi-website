@@ -1,5 +1,6 @@
 import React from "react";
 import { Check, Target, TrendingUp } from "lucide-react";
+import Image from "next/image";
 
 /**
  * TrustStrategySection — 2-block staggered layout matching the mock
@@ -43,10 +44,12 @@ export default function StrategySection() {
         <div className="justify-self-end">
           {/* Replace with your path */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/images/consulting.jpg"
             alt="Team collaborating around a table"
             className="h-[280px] w-full max-w-[420px] rounded-2xl object-cover shadow-md ring-1 ring-black/5 md:h-[320px]"
+            width={420}
+            height={320}
           />
         </div>
       </div>
@@ -59,10 +62,12 @@ export default function StrategySection() {
         {/* Image left */}
         <div className="justify-self-start">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/images/strategy.jpg"
             alt="Presenter discussing analytics with team"
             className="h-[300px] w-full max-w-[560px] rounded-2xl object-cover shadow-md ring-1 ring-black/5 md:h-[340px]"
+            width={560}
+            height={340}
           />
         </div>
 

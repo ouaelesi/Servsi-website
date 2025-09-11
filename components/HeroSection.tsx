@@ -2,6 +2,7 @@ import { Shield, Smile, Sparkles, Zap } from "lucide-react";
 import { Play } from "next/font/google";
 import React from "react";
 import PartnersSlider from "./PartnersSlider";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -58,10 +59,12 @@ export default function HeroSection() {
               />
               <div className="relative overflow-hidden rounded-[1.75rem]">
                 {/* Replace with your image */}
-                <img
+                <Image
                   src="/images/hero.png"
                   alt="Réunion d'équipe"
                   className="block h-[420px] w-full object-cover md:h-[520px]"
+                  width={500}
+                  height={300}
                 />
               </div>
 

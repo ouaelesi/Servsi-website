@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const DEFAULT_PARTNERS = [
@@ -32,18 +34,20 @@ export default function PartnersSection() {
           }}
         >
           {DEFAULT_PARTNERS.map((partner) => (
-            <a
+            <Link
               key={partner.name + partner.src}
               href={partner.href}
               style={{ display: "flex", alignItems: "center", padding: "1rem" }}
             >
-              <img
+              <Image
                 src={partner.src}
                 alt={partner.name}
                 style={{ maxHeight: 60, maxWidth: 320, objectFit: "contain" }}
                 className="w-25"
+                width={160}
+                height={60}
               />
-            </a>
+            </Link>
           ))}
         </div>
       </div>

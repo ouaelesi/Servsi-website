@@ -1,5 +1,6 @@
 import React from "react";
 import { Play, Shield, Sparkles, CheckCircle2, XCircle } from "lucide-react";
+import Image from "next/image";
 
 /**
  * RightPlaceSection — matches the provided mock
@@ -47,10 +48,12 @@ export default function AboutHeader() {
             />
             <div className="relative overflow-hidden rounded-[1.75rem]">
               {/* Replace with your image */}
-              <img
+              <Image
                 src="/images/about_header.jpg"
                 alt="Réunion d'équipe"
                 className="block h-[420px] w-full object-cover md:h-[520px]"
+                width={500}
+                height={300}
               />
             </div>
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 /**
@@ -70,7 +71,13 @@ function Avatar({ src, initials }: { src?: string; initials?: string }) {
       {src ? (
         // regular <img> avoids Next/Image domain config
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={src} alt="" className="h-full w-full object-cover" />
+        <Image
+          src={src}
+          alt=""
+          className="h-full w-full object-cover"
+          width={48}
+          height={48}
+        />
       ) : (
         <div className="flex h-full w-full items-center justify-center text-sm font-semibold text-gray-700">
           {initials?.slice(0, 2).toUpperCase()}
@@ -83,15 +90,17 @@ function Avatar({ src, initials }: { src?: string; initials?: string }) {
 export default function TestimonialsSection({
   items = DEFAULT_TESTIMONIALS,
   title = "Ce que disent nos clients",
-  subtitle =
-    "Les témoignages de nos clients reflètent notre engagement envers l’excellence.",
+  subtitle = "Les témoignages de nos clients reflètent notre engagement envers l’excellence.",
 }: {
   items?: Testimonial[];
   title?: string;
   subtitle?: string;
 }) {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-16 md:pt-20 md:px-10" id="testimonials">
+    <section
+      className="mx-auto max-w-7xl px-6 py-16 md:pt-20 md:px-10"
+      id="testimonials"
+    >
       {/* Heading */}
       <div className="mb-15 text-center">
         <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl">
@@ -109,7 +118,7 @@ export default function TestimonialsSection({
           >
             <p className="text-gray-700 leading-relaxed text-sm">{t.quote}</p>
             <div className="mt-6 flex items-center gap-4">
-              <Avatar  initials={t.initials}  />
+              <Avatar initials={t.initials} />
               <div>
                 <div className="font-medium text-gray-900">{t.name}</div>
                 <div className="text-sm text-gray-500">{t.role}</div>

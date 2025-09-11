@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 export type Member = {
@@ -111,10 +112,12 @@ function Card({ member }: { member: Member }) {
   return (
     <figure className="relative h-[300px] w-[300px] min-w-[300px] overflow-hidden rounded-[2rem] shadow-lg ring-1 ring-black/5">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         src={member.src}
         alt={member.name}
         className="absolute inset-0 h-full w-full object-cover"
+        width={300}
+        height={300}
       />
       {/* bottom gradient overlay */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />

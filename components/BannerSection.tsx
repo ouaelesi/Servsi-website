@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 type Props = {
@@ -48,12 +49,12 @@ export default function CtaBanner({
           </p>
 
           <div className="mt-8 flex justify-center">
-            <a
+            <Link
               href={ctaHref}
               className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2 text-base font-semibold text-black shadow-lg ring-1 ring-emerald-500/40 transition hover:brightness-95 md:px-8 md:py-3 md:text-md"
             >
               {ctaLabel}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

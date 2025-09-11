@@ -1,5 +1,7 @@
 // PartnersMarquee.jsx
 "use client"
+import Image from "next/image"
+import Link from "next/link"
 import React from "react"
 
 export type Partner = {
@@ -59,19 +61,21 @@ export default function PartnersSlider({
 function Logo({ partner }: { partner: Partner }) {
   const img = (
     // eslint-disable-next-line @next/next/no-img-element
-    <img
+    <Image
       src={partner.src}
       alt={partner.name}
       className="h-8 w-auto md:h-10 object-contain  transition"
       draggable={false}
+      width={160}
+      height={60}
     />
   )
   return (
     <div className="shrink-0 flex items-center">
       {partner.href ? (
-        <a href={partner.href} className="inline-flex items-center" aria-label={partner.name}>
+        <Link href={partner.href} className="inline-flex items-center" aria-label={partner.name}>
           {img}
-        </a>
+        </Link>
       ) : img}
     </div>
   )

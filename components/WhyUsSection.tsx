@@ -1,5 +1,6 @@
 import React from "react";
 import { Play, Shield, Sparkles, CheckCircle2, XCircle } from "lucide-react";
+import Image from "next/image";
 
 /**
  * RightPlaceSection — matches the provided mock
@@ -63,10 +64,12 @@ export default function WhyUsSection() {
             />
             <div className="relative overflow-hidden rounded-[1.75rem]">
               {/* Replace with your image */}
-              <img
+              <Image
                 src="/images/meeting.jpg"
                 alt="Réunion d'équipe"
                 className="block h-[420px] w-full object-cover md:h-[520px]"
+                width={500}
+                height={300}
               />
             </div>
 
@@ -77,7 +80,7 @@ export default function WhyUsSection() {
                   <Sparkles className="h-4 w-4 text-emerald-300" />
                 </span>
                 <span className="text-sm font-medium text-white/90">
-                  15 ans d'expertise
+                  15 ans d&apos;expertise
                 </span>
               </div>
             </div>
@@ -172,8 +175,6 @@ export default function WhyUsSection() {
             </div>
             <article className="relative rounded-[1.5rem]  border-2 border-emerald-400/25 bg-gradient-to-bl from-emerald-400/20 via-black/5 to-black/10 p-6  ring-2 ring-emerald-400/20 md:p-8">
               {/* glow */}
-
-            
 
               <div className="relative">
                 <ul className="space-y-4 text-white">
