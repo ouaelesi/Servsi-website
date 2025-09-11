@@ -20,7 +20,7 @@ export default function Navbar({
     { label: "Work", href: "/work" },
     { label: "Testimonials", href: "/#testimonials" },
     { label: "About", href: "/about" },
-    { label: "Blog", href: "/blog" },
+    { label: "Blog", href: "/blogs" },
   ],
   cta = { label: "Contact us", href: "/contact" },
 }: Props) {
