@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
+import FooterSection from "@/components/FooterSection";
+import Navbar from "@/components/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  weight: ["300", "400", "500", "700"], // Example weights
+  subsets: ["latin"],
+  display: "swap", // Optimizes font loading
+  variable: "--font-montserrat", // Optional: for CSS variables
 });
 
 const geistMono = Geist_Mono({
@@ -23,11 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${montserrat.variable}`}>
+      <body className="scroll-smooth "> 
+        <Navbar />
         {children}
+        <FooterSection />
       </body>
     </html>
   );
