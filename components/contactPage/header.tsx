@@ -19,7 +19,7 @@ export default function ContactHeader() {
         {/* Heading */}
         <div className="text-center md:w-2/3 mx-auto">
           <h2 className="text-balance text-4xl font-extrabold leading-tight tracking-tight md:text-5xl xl:text-6xl  ">
-            Let's connect & bring your{" "}
+            Let&apos;s connect & bring your{" "}
             <span className="text-primary">ideas to life.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-balance text-white/80">
