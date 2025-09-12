@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -31,10 +32,7 @@ export default function Navbar({
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-400 text-xs font-black text-black ring-1 ring-emerald-500/40">
-            S
-          </span>
-          <span className="text-lg font-extrabold tracking-wide">SERVSI</span>
+         <Image src="/images/servsi_logo.svg" width={200} height={50} alt="logo" className="w-30" />
         </Link>
 
         {/* Desktop links */}

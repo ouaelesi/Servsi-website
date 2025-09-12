@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -22,12 +23,13 @@ export default function FooterSection() {
           {/* left: brand + newsletter */}
           <div className="lg:col-span-2">
             <div className="mb-6 flex items-center gap-2">
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-primary text-sm font-black text-black">
-                S
-              </span>
-              <span className="text-xl font-extrabold tracking-wide">
-                SERVSI
-              </span>
+              <Image
+                src="/images/servsi_logo.svg"
+                width={200}
+                height={50}
+                alt="logo"
+                className="w-30"
+              />
             </div>
 
             <h3 className="text-lg font-semibold">

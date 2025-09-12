@@ -12,6 +12,7 @@ export type PostMeta = {
   category: string;
   heroImage: string; // /public path preferred
   author: Author;
+  content: any[];
 };
 
 const DEFAULT_META: PostMeta = {
@@ -25,6 +26,23 @@ const DEFAULT_META: PostMeta = {
     name: "Matthew King",
     avatar: "/images/TEAM/3.jpg",
   },
+  content: [
+    {
+      title: "Content with a Mission",
+      text: "Content is the engine of digital marketing—but not all content works. If it doesn’t drive action, it’s just noise. Writing with purpose means understanding your audience, offering value, and guiding them toward the next step. In this post, we’ll show you how to create content that converts—whether it’s a blog, landing page, or social caption.",
+      images: [],
+    },
+    {
+      title: "Content with a Mission",
+      text: "Begin with a compelling headline. Hook attention fast and hint at the value inside. Use clear, benefit-driven language. Break up long text with subheadings, bullets, or visuals. Focus on one goal per piece—don’t overwhelm with multiple CTAs. Address pain points and offer practical advice. Add emotion—stories, analogies, and empathy build trust. Include proof points like stats, testimonials, or case studies. Finally, guide readers with a strong, clear CTA: “Download now,” “Book a call,” or “Get your guide.” Track performance and tweak based on results.",
+      images: ["/images/blogs/blog.jpg", "/images/blogs/blog.jpg" , "/images/blogs/blog.jpg"],
+    },
+    {
+      title: "",
+      text: "",
+      images: [],
+    },
+  ],
 };
 
 /**
@@ -75,7 +93,6 @@ export default function BlogPost({
               >
                 <path d="M15 18l-6-6 6-6" />
               </svg>
-              
             </a>
           </div>
 
@@ -111,7 +128,7 @@ export default function BlogPost({
       {/* Hero card overlaps header & body */}
       <div className="relative -mt-20">
         <div className="mx-auto max-w-4xl px-6">
-          <div className="overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/10">
+          <div className="overflow-hidden rounded-2xl bg-white ">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={meta.heroImage}
@@ -124,33 +141,32 @@ export default function BlogPost({
 
       {/* Body */}
       <section className="mx-auto max-w-3xl px-6 py-12 sm:py-16">
-        {children ?? (
-          <div className="prose prose-zinc max-w-none prose-headings:tracking-tight prose-p:leading-relaxed">
-            <h2>Content with a Mission</h2>
-            <p>
-              Content is the engine of digital marketing—but not all content
-              works. If it doesn’t drive action, it’s just noise. Writing with
-              purpose means understanding your audience, offering value, and
-              guiding them toward the next step.
-            </p>
-            <p>
-              Effective content blends clarity with emotion. Start with a clear
-              outcome, anchor on a single message, and remove anything that
-              distracts from it. Then add narrative and visual structure to make
-              it memorable.
-            </p>
-            <h3>Principles that Drive Conversion</h3>
-            <ul>
-              <li>Address a real problem with specific language.</li>
-              <li>Make the next step obvious and low-friction.</li>
-              <li>Use proof—data, examples, or customer stories.</li>
-            </ul>
-            <p>
-              When teams align on purpose, every headline, paragraph, and
-              call-to-action becomes a lever for growth.
-            </p>
+        {meta.content.map((section, index) => (
+          <div
+            key={index}
+            className="prose prose-zinc max-w-none prose-headings:tracking-tight prose-p:leading-relaxed mb-8"
+          >
+            {section.title && (
+              <h2 className="text-2xl text-medium mb-3">{section.title}</h2>
+            )}
+            {section.text && <p>{section.text}</p>}
+            <div className="flex gap-2">
+              {section.images &&
+                section.images.map((imgSrc: any, imgIndex: any) => (
+                  <img
+                    key={imgIndex}
+                    src={imgSrc}
+                    alt={`Blog image ${imgIndex + 1}`}
+                    className="my-4 rounded-lg"
+                    style={{
+                      width: `${(1 / section.images.length) * 100}%`,
+                      height: "auto",
+                    }}
+                  />
+                ))}
+            </div>
           </div>
-        )}
+        ))}
       </section>
     </article>
   );
