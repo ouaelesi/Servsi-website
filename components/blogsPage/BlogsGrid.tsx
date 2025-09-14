@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export type Post = {
@@ -17,13 +18,13 @@ const DEFAULT_POSTS: Post[] = [
   {
     title: "How to Use Customer Data to Improve Retention",
     category: "Retention",
-     image: "/images/blogs/blog.jpg",
+    image: "/images/blogs/blog.jpg",
     href: "/blogs/customer-data-retention",
   },
   {
     title: "SEO Trends 2025: What to Watch for Greater Visibility",
     category: "Branding",
-     image: "/images/blogs/blog.jpg",
+    image: "/images/blogs/blog.jpg",
     href: "/blogs/seo-trends-2025",
   },
   {
@@ -40,22 +41,25 @@ const DEFAULT_POSTS: Post[] = [
  * - Title below each image
  * - Minimal hover scale
  */
-export default function BlogGrid({ posts = DEFAULT_POSTS }: { posts?: Post[] }) {
+export default function BlogGrid({
+  posts = DEFAULT_POSTS,
+}: {
+  posts?: Post[];
+}) {
   return (
     <section className="mx-auto max-w-4xl px-4 md:px-0 py-20">
       <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:gap-x-8">
         {posts.map((p, i) => (
           <article key={i} className="text-left">
-            <a href={p.href ?? '#'} className="group block">
+            <a href={p.href ?? "#"} className="group block">
               <div className="relative overflow-hidden rounded-[20px] bg-gray-100">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={p.image}
                   alt={p.title}
                   className="aspect-[1/1] w-full object-cover transition will-change-transform group-hover:scale-[1.02]"
                 />
                 <span className="absolute bottom-3 left-3 inline-flex items-center gap-2 rounded-full bg-white/55 px-5 py-2 text-xs font-medium text-gray-800 ">
-                  
                   {p.category}
                 </span>
               </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Play, Shield, Sparkles, CheckCircle2, XCircle } from "lucide-react";
+import { Play } from "lucide-react";
 import Image from "next/image";
 
 /**

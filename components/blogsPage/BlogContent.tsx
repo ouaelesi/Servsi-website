@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export type Author = {
@@ -12,7 +13,13 @@ export type PostMeta = {
   category: string;
   heroImage: string; // /public path preferred
   author: Author;
-  content: any[];
+  content: PostContentSection[];
+};
+
+export type PostContentSection = {
+  title: string;
+  text: string;
+  images: string[]; // array of /public paths preferred
 };
 
 const DEFAULT_META: PostMeta = {
@@ -35,7 +42,11 @@ const DEFAULT_META: PostMeta = {
     {
       title: "Content with a Mission",
       text: "Begin with a compelling headline. Hook attention fast and hint at the value inside. Use clear, benefit-driven language. Break up long text with subheadings, bullets, or visuals. Focus on one goal per piece—don’t overwhelm with multiple CTAs. Address pain points and offer practical advice. Add emotion—stories, analogies, and empathy build trust. Include proof points like stats, testimonials, or case studies. Finally, guide readers with a strong, clear CTA: “Download now,” “Book a call,” or “Get your guide.” Track performance and tweak based on results.",
-      images: ["/images/blogs/blog.jpg", "/images/blogs/blog.jpg" , "/images/blogs/blog.jpg"],
+      images: [
+        "/images/blogs/blog.jpg",
+        "/images/blogs/blog.jpg",
+        "/images/blogs/blog.jpg",
+      ],
     },
     {
       title: "",
@@ -106,10 +117,12 @@ export default function BlogPost({
           <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={meta.author.avatar}
                 alt={meta.author.name}
                 className="h-8 w-8 rounded-full object-cover ring-1 ring-white/20"
+                width={32}
+                height={32}
               />
               <div className="text-sm text-white/90">
                 <span className="font-medium">{meta.author.name}</span>
@@ -130,7 +143,7 @@ export default function BlogPost({
         <div className="mx-auto max-w-4xl px-6">
           <div className="overflow-hidden rounded-2xl bg-white ">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={meta.heroImage}
               alt={meta.title}
               className="h-[420px] w-full object-cover sm:h-[520px]"
@@ -152,8 +165,8 @@ export default function BlogPost({
             {section.text && <p>{section.text}</p>}
             <div className="flex gap-2">
               {section.images &&
-                section.images.map((imgSrc: any, imgIndex: any) => (
-                  <img
+                section.images.map((imgSrc: string, imgIndex: number) => (
+                  <Image
                     key={imgIndex}
                     src={imgSrc}
                     alt={`Blog image ${imgIndex + 1}`}

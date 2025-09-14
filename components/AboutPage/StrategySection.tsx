@@ -43,7 +43,6 @@ export default function StrategySection() {
         {/* Image right */}
         <div className="justify-self-end">
           {/* Replace with your path */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <Image
             src="/images/consulting.jpg"
             alt="Team collaborating around a table"
@@ -61,7 +60,6 @@ export default function StrategySection() {
       <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
         {/* Image left */}
         <div className="justify-self-start">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <Image
             src="/images/strategy.jpg"
             alt="Presenter discussing analytics with team"
