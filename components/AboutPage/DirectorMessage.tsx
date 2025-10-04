@@ -25,7 +25,7 @@ export default function DirectorMessage() {
           <p className="text-gray-700 leading-relaxed mb-4">
             Bienvenue sur le site officiel de <strong>SERVSI</strong>. Je suis 
             <strong> KHALDI Houari</strong>, Directeur Général de notre société, spécialisée 
-            dans l’installation et l’intégration des réseaux informatiques ainsi que les 
+            dans l&quot;installation et l&quot;intégration des réseaux informatiques ainsi que les 
             solutions de sécurité physique. Notre priorité est de fournir à nos clients 
             des services de haute qualité, innovants et adaptés à leurs besoins spécifiques.
           </p>
@@ -38,8 +38,8 @@ export default function DirectorMessage() {
           <p className="text-gray-700 leading-relaxed">
             Nous sommes déterminés à continuer à innover et à renforcer notre position 
             en tant que partenaire de confiance dans le domaine des réseaux et de la 
-            sécurité en Algérie. N’hésitez pas à nous contacter pour toute demande ou 
-            collaboration. Merci de votre confiance et bienvenue dans l’univers de SERVSI.
+            sécurité en Algérie. N&quot;hésitez pas à nous contacter pour toute demande ou 
+            collaboration. Merci de votre confiance et bienvenue dans l&quot;univers de SERVSI.
           </p>
         </div>
       </div>
