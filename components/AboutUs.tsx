@@ -25,14 +25,14 @@ export default function HeroServsi() {
         </h1>
       </div>
       <Image
-        className="absolute -right-10 top-5  md:w-32 w-25"
+        className="absolute -right-10 top-5  md:w-48 w-25"
         src="/images/right_side_logo.png"
         width={200}
         height={200}
         alt="servsi logo"
       />
       <Image
-        className="absolute -left-10 bottom-5 md:w-32 w-25"
+        className="absolute -left-10 bottom-5 md:w-48 w-25"
         src="/images/left_side_logo.png"
         width={200}
         height={200}
