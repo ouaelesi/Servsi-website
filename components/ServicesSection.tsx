@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import {
   ClipboardList,
@@ -7,6 +7,8 @@ import {
   Network,
   DatabaseBackup,
   Cloud,
+  Camera,
+  Umbrella,
 } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
@@ -35,40 +37,34 @@ export default function ServicesSection() {
     icon: React.ElementType;
   }> = [
     {
-      title: "Conseil & Gestion de Projets IT",
-      desc:
-        "Nous vous guidons dans vos projets IT, de la stratégie à la mise en œuvre complète.",
+      title: "Maintenance & Support IT",
+      desc: "Assurez la continuité de vos opérations grâce à un support réactif et personnalisé, sur site ou à distance, incluant suivi, mise à jour et optimisation des systèmes.",
       icon: ClipboardList,
     },
     {
-      title: "Maintenance & Support IT",
-      desc:
-        "Assurez la continuité de vos opérations avec notre support réactif, sur site ou à distance.",
-      icon: RefreshCw,
-    },
-    {
-      title: "Cybersécurité Avancée",
-      desc:
-        "Protégez vos systèmes et données grâce à nos solutions de sécurité, audits et surveillance continue.",
+      title: "Cybersécurité & Conformité ISO",
+      desc: "Protégez vos systèmes avec des solutions avancées : audits réguliers, conformité ISO, surveillance 24/7 et conseil stratégique.",
       icon: Shield,
     },
     {
+      title: "Sécurité Physique & Contrôle d’Accès",
+      desc: "Déployez des systèmes CCTV intelligents et un contrôle d’accès sécurisé pour protéger vos infrastructures et vos données sensibles.",
+      icon: Camera,
+    },
+    {
       title: "Infrastructures IT & Réseaux",
-      desc:
-        "Nous concevons et déployons des infrastructures réseau fiables et performantes pour soutenir votre croissance.",
+      desc: "Conception et intégration d’infrastructures performantes, fiables et évolutives, alliant performance, stabilité et sécurité.",
       icon: Network,
     },
     {
-      title: "Sauvegarde & Reprise Après Sinistre",
-      desc:
-        "Protégez vos données critiques et assurez une reprise rapide en cas d'incident majeur.",
-      icon: DatabaseBackup,
+      title: "Cloud, Virtualisation & Sauvegarde",
+      desc: "Gagnez en flexibilité et en résilience avec le cloud : sauvegarde sécurisée, reprise après sinistre et continuité d’activité.",
+      icon: Cloud,
     },
     {
-      title: "Solutions Cloud & Virtualisation",
-      desc:
-        "Gagnez en flexibilité et en performance avec nos solutions cloud et de virtualisation sécurisées.",
-      icon: Cloud,
+      title: "Smart Building & Gestion Intelligente",
+      desc: "Optimisez la gestion de vos bâtiments grâce à l’automatisation, l’efficacité énergétique et la sécurité intégrée.",
+      icon: Umbrella,
     },
   ];
 
@@ -85,8 +81,9 @@ export default function ServicesSection() {
         <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl">
           Services
         </h2>
-        <p className="mt-3 text-gray-600">
-          Des services informatiques fiables pour des opérations sans interruption.
+        <p className="mt-3 text-gray-600 font-medium">
+          Des services informatiques fiables pour des opérations sans
+          interruption.
         </p>
       </motion.div>
 
@@ -105,7 +102,7 @@ export default function ServicesSection() {
               key={i}
               variants={fadeUp}
               className="group rounded-xl bg-[#f8f8f8] p-3 transition-all md:p-5
-                         hover:shadow-md hover:-translate-y-0.5"
+                          hover:-translate-y-0.5"
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
@@ -117,8 +114,12 @@ export default function ServicesSection() {
                 <Icon className="h-6 w-6 text-gray-900" />
               </motion.div>
 
-              <h3 className="text-md text-gray-900 md:text-xl">{s.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-gray-600">{s.desc}</p>
+              <h3 className="text-md font-medium text-gray-900 md:text-xl">
+                {s.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                {s.desc}
+              </p>
             </motion.article>
           );
         })}

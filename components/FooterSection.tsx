@@ -1,3 +1,4 @@
+import { Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,7 +7,7 @@ export default function FooterSection() {
   return (
     <footer className="relative isolate bg-foreground text-white">
       {/* subtle grid */}
-      <div
+      {/* <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-20"
         style={{
@@ -15,6 +16,10 @@ export default function FooterSection() {
           backgroundSize: "44px 44px",
           backgroundPosition: "-1px -1px",
         }}
+      /> */}
+      <div
+        className="absolute w-1/2 h-1/2 left-20 -inset-6 rounded-[2.5rem] bg-emerald-400/10 blur-3xl transition-opacity duration-500"
+        aria-hidden
       />
 
       <div className="relative mx-auto max-w-7xl px-6 py-12 md:px-10 md:py-16 md:pb-7">
@@ -53,9 +58,15 @@ export default function FooterSection() {
               />
               <button
                 type="submit"
-                className="whitespace-nowrap rounded-xl bg-primary px-5 py-3 font-medium text-black shadow ring-1 ring-emerald-500/40 transition hover:brightness-95"
+                className="whitespace-nowrap md:block hidden rounded-xl bg-primary px-5 py-3 font-medium text-black shadow ring-1 ring-emerald-500/40 transition hover:brightness-95"
               >
                 Recevoir les alertes
+              </button>
+                <button
+                type="submit"
+                className="whitespace-nowrap block md:hidden rounded-xl bg-primary px-3 py-3 font-medium text-black shadow ring-1 ring-emerald-500/40 transition hover:brightness-95"
+              >
+                <Send className="h-5 w-5" />
               </button>
             </form>
           </div>

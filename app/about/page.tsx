@@ -1,5 +1,6 @@
 import AboutHeader from "@/components/AboutPage/AboutHeader";
 import AwardsSection from "@/components/AboutPage/AwardsSection";
+import DirectorMessage from "@/components/AboutPage/DirectorMessage";
 import TeamMarquee from "@/components/AboutPage/OurTeam";
 import StrategySection from "@/components/AboutPage/StrategySection";
 import CtaBanner from "@/components/BannerSection";
@@ -18,7 +19,8 @@ export default function AboutPage() {
       <AboutHeader />
       <StrategySection />
       <AwardsSection />
-      <TeamMarquee />
+      <DirectorMessage/>
+      {/* <TeamMarquee /> */}
       <CtaBanner />
     </div>
   );

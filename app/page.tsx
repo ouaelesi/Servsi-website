@@ -22,9 +22,10 @@ export default function Home() {
       <HeroSection />
       <AboutUsSection />
       <ServicesSection />
+      <PartnersSection />
       <WhyUsSection />
       <TestimonialsSection />
-      <PartnersSection/>
+
       <FAQAccordion />
       <CtaBanner />
     </div>

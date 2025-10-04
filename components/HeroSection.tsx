@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useEffect, useRef, useState } from "react";
 import { Smile, Sparkles, Zap } from "lucide-react";
@@ -24,7 +24,15 @@ const fadeUp: Variants = {
 };
 
 // Tiny count-up that starts when visible
-function Counter({ to, prefix = "", suffix = "" }: { to: number; prefix?: string; suffix?: string }) {
+function Counter({
+  to,
+  prefix = "",
+  suffix = "",
+}: {
+  to: number;
+  prefix?: string;
+  suffix?: string;
+}) {
   const ref = useRef<HTMLSpanElement | null>(null);
   const inView = useInView(ref, { once: true, amount: 0.5 });
   const [val, setVal] = useState(0);
@@ -79,14 +87,16 @@ export default function HeroSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.35 }}
-          className="pb-15 flex flex-col justify-center gap-4 lg:col-span-7 xl:col-span-7"
+          className="pb-15 relative flex flex-col justify-center gap-4 lg:col-span-6 xl:col-span-6"
         >
           <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">
-            Solutions IT fiables pour <span className="text-primary">Votre Entreprise</span>
+            Solutions IT fiables pour{" "}
+            <span className="text-primary">Votre Entreprise</span>
           </h1>
           <p className="mt-4 text-sm md:text-lg">
-            De l’infrastructure réseau à la cybersécurité avancée, SERVSI vous accompagne pour
-            construire et protéger votre environnement numérique.
+            De l’infrastructure réseau à la cybersécurité avancée, SERVSI vous
+            accompagne pour construire et protéger votre environnement
+            numérique.
           </p>
 
           <motion.div
@@ -94,20 +104,24 @@ export default function HeroSection() {
             className="flex gap-4"
             transition={{ delay: 0.05 }}
           >
-            <button className="inline-flex items-center gap-2 rounded-full bg-primary/20 px-4 py-3 text-xs font-medium text-white shadow-lg transition hover:brightness-95 md:px-10 md:text-md">
-              En savoir plus
-            </button>
-            <button className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-xs font-medium text-black shadow-lg transition hover:brightness-95 md:text-md">
+            <button className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-primary/20 px-4 py-3 text-xs font-medium text-white shadow-lg transition hover:brightness-95 md:px-10 md:text-md">
               Découvrir nos services
+            </button>
+            <button className="inline-flex cursor-pointer items-center gap-2 font-bold rounded-full bg-primary px-8 py-3 text-xs  text-black shadow-lg transition hover:brightness-95 md:text-md">
+              Passez au Digital
             </button>
           </motion.div>
 
           <motion.div
             variants={fadeUp}
             transition={{ delay: 0.1 }}
-            className="mt-2"
+            className="mt-2 relative"
           >
             <PartnersSlider />
+            <div
+              className="absolute w-1/2 left-20 -inset-6 rounded-[2.5rem] bg-emerald-400/10 blur-3xl transition-opacity duration-500"
+              aria-hidden
+            />
           </motion.div>
         </motion.div>
 
@@ -117,7 +131,7 @@ export default function HeroSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.35 }}
-          className="lg:col-span-5 xl:col-span-5"
+          className="lg:col-span-6 xl:col-span-6"
         >
           <div className="relative mx-auto">
             <div className="relative">
@@ -125,11 +139,11 @@ export default function HeroSection() {
                 className="absolute -inset-6 rounded-[2.5rem] bg-emerald-400/10 blur-3xl transition-opacity duration-500"
                 aria-hidden
               />
-              <div className="relative overflow-hidden rounded-[1.75rem]">
+              <div className="relative   rounded-[1.75rem]">
                 <Image
-                  src="/images/hero.png"
+                  src="/images/gd.png"
                   alt="Réunion d'équipe"
-                  className="block h-[420px] w-full object-cover md:h-[520px]"
+                  className="block  w-full object-cover "
                   width={1000}
                   height={700}
                   priority
@@ -142,14 +156,14 @@ export default function HeroSection() {
                 whileInView={{ opacity: 1, y: 0, x: 0, scale: 1 }}
                 transition={{ duration: 0.55, ease, delay: 0.15 }}
                 viewport={{ once: true, amount: 0.4 }}
-                className="absolute right-0 top-0 -translate-y-1/2 sm:block md:left-0"
+                className="absolute bottom-0 -translate-y-1/2 sm:block md:right-0"
               >
-                <div className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 backdrop-blur-sm">
+                <div className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 backdrop-blur-sm ">
                   <span className="flex h-6 w-6 items-center justify-center rounded-lg">
-                    <Sparkles className="h-4 w-4 text-emerald-300" />
+                    <Sparkles className="h-4 w-4 text-emerald-300 " />
                   </span>
                   <span className="text-sm font-medium text-white/90">
-                    Performance et fiabilité
+                    +25 Partenaires internationaux
                   </span>
                 </div>
               </motion.div>
@@ -175,7 +189,7 @@ export default function HeroSection() {
                 whileInView={{ opacity: 1, y: 0, x: 0 }}
                 transition={{ duration: 0.55, ease, delay: 0.35 }}
                 viewport={{ once: true, amount: 0.4 }}
-                className="absolute bottom-6 z-40 w-[270px] max-w-[70vw] md:-left-35"
+                className="absolute -top-10 z-40 w-[270px] max-w-[70vw] md:-left-3"
               >
                 <div className="rounded-2xl bg-white/10 p-2 text-white/90 backdrop-blur-md ring-1 ring-white/15 md:p-5">
                   <div className="mb-2 flex items-center gap-2">
@@ -185,11 +199,11 @@ export default function HeroSection() {
                     <div>
                       <span className="text-sm font-medium text-white md:text-md">
                         <span className="text-primary">
-                          +<Counter to={500} />
+                          +<Counter to={100} />
                         </span>{" "}
-                        Infrastructures
+                        km de 
                       </span>
-                      <p className="text-xs text-white/80">Sécurisées</p>
+                      <p className="text-sm font-medium text-white/80">Réseau réalisé</p>
                     </div>
                   </div>
                 </div>

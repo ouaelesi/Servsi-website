@@ -1,9 +1,10 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import PartnersSlider from "./PartnersSlider";
 
 const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -19,7 +20,11 @@ const container: Variants = {
 
 const DEFAULT_PARTNERS = [
   { name: "Cisco", src: "/images/partners/Logo_entp.svg", href: "#" },
-  { name: "Fortinet", src: "/images/partners/Banque_du_Golf_Algérie.svg", href: "#" },
+  {
+    name: "Fortinet",
+    src: "/images/partners/Banque_du_Golf_Algérie.svg",
+    href: "#",
+  },
   { name: "AWS", src: "/images/partners/AlgeriePoste 1.svg", href: "#" },
   { name: "Azure", src: "/images/partners/Algerie_Telecom.svg.svg", href: "#" },
   { name: "Dell", src: "/images/partners/Sonatrach.svg", href: "#" },
@@ -28,21 +33,25 @@ const DEFAULT_PARTNERS = [
 
 export default function PartnersSection() {
   return (
-    <section className="relative isolate flex flex-col justify-center">
+    <section className="relative isolate flex flex-col justify-center py-10">
       <motion.div
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.35 }}
-        className="mb-15 text-center"
+        className=" text-center"
       >
         <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl">
-          Ils nous ont fait confiance
+          Partenaires
         </h2>
+        <p className="mx-auto mt-3 max-w-3xl text-gray-600">
+          Des services informatiques fiables pour des opérations sans
+          interruption.
+        </p>
       </motion.div>
 
       {/* Grid of logos (stagger) */}
-      <motion.div
+      {/* <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
@@ -70,7 +79,12 @@ export default function PartnersSection() {
             </Link>
           </motion.div>
         ))}
-      </motion.div>
+      </motion.div> */}
+      <div className="py-10">
+     <PartnersSlider className="mt-10" section="Parntners" />
+      </div>
+ 
+      {/* <PartnersSlider className="mt-10" section="Parntners" direction="right" /> */}
     </section>
   );
 }

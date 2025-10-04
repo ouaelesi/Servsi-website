@@ -16,19 +16,19 @@ export default function StrategySection() {
         {/* Text left */}
         <div>
           <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl">
-            Inspiring trust through
-            <br />
-            results and integrity
+            Optimisation des Infrastructures IT
           </h2>
           <p className="mt-4 max-w-xl text-gray-600">
-            Our marketing team is expert in creating smart strategies that help you grow and connect with
-            audiences.
+            SERVSI conçoit, installe et gère vos réseaux et serveurs pour
+            garantir des infrastructures fiables, performantes et adaptées aux
+            besoins de vos entreprises. Nous contribuons activement à la
+            modernisation des infrastructures numériques en Algérie, en
+            soutenant les acteurs locaux dans leur transition digitale.
           </p>
           <ul className="mt-6 space-y-3 text-gray-800">
             {[
-              "Strategic consulting from top experts",
-              "Trusted by startups and global brands",
-              "End-to-end marketing solutions",
+              "Conception et déploiement de réseaux et serveurs sur mesure",
+              "Partenariats technologiques pour une performance durable",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-black/5">
@@ -44,7 +44,7 @@ export default function StrategySection() {
         <div className="justify-self-end">
           {/* Replace with your path */}
           <Image
-            src="/images/consulting.jpg"
+            src="/images/about2.jpg"
             alt="Team collaborating around a table"
             className="h-[280px] w-full max-w-[420px] rounded-2xl object-cover shadow-md ring-1 ring-black/5 md:h-[320px]"
             width={420}
@@ -61,9 +61,9 @@ export default function StrategySection() {
         {/* Image left */}
         <div className="justify-self-start">
           <Image
-            src="/images/strategy.jpg"
+            src="/images/about1.jpg"
             alt="Presenter discussing analytics with team"
-            className="h-[300px] w-full max-w-[560px] rounded-2xl object-cover shadow-md ring-1 ring-black/5 md:h-[340px]"
+            className="h-[300px] w-full max-w-[420px] rounded-2xl object-cover shadow-md ring-1 ring-black/5 md:h-[340px]"
             width={560}
             height={340}
           />
@@ -72,25 +72,27 @@ export default function StrategySection() {
         {/* Text right */}
         <div>
           <h3 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl">
-            Driving brands forward
-            <br />
-            with strategy & results
+            Sécurité & Performance de vos systèmes IT
           </h3>
           <p className="mt-4 max-w-xl text-gray-600">
-            Our team designs hyper-targeted strategies that don’t just reach audiences, but move them to act
-            and engage.
+            Nos ingénieurs déploient des solutions de cybersécurité avancées et
+            assurent une supervision continue pour protéger vos données et
+            garantir la continuité de vos services. À travers nos expertises,
+            nous participons à renforcer la souveraineté numérique et à
+            accompagner la croissance des entreprises algériennes dans leur
+            transformation digitale.
           </p>
 
           <div className="mt-6 space-y-5">
             <FeatureRow
               icon={<Target className="h-4 w-4" />}
-              title="Precision Targeting"
-              text="Turn strategies into results."
+              title="Protection ciblée"
+              text="Sécurisation des données sensibles et des infrastructures critiques."
             />
             <FeatureRow
               icon={<TrendingUp className="h-4 w-4" />}
-              title="Scalable Results"
-              text="Grow without redesigning."
+              title="Croissance évolutive"
+              text="Développement durable de vos systèmes sans refonte complexe."
             />
           </div>
         </div>

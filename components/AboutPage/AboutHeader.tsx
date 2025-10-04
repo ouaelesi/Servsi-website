@@ -26,18 +26,36 @@ export default function AboutHeader() {
         }}
       />
 
+      <div className="text-center pt-20 mt-5 mx-auto relative ">
+        <Image
+          className="absolute -right-10 top-5 -z-10 "
+          src="/images/right_side_logo.png"
+          width={200}
+          height={200}
+          alt="servsi logo"
+        />
+        <Image
+          className="absolute -left-10 -bottom-15 -z-10"
+          src="/images/left_side_logo.png"
+          width={200}
+          height={200}
+          alt="servsi logo"
+        />
+        <h2 className="text-balance text-4xl z-50  font-extrabold leading-tight tracking-tight md:text-5xl xl:text-6xl  ">
+          Là où{" "}
+          <span className="text-primary">la vision rencontre l’expertise</span>,
+          pour bâtir <span className="text-primary">le succès digital.</span>
+        </h2>
+        <p className="mx-auto text-md font-medium mt-4 max-w-3xl text-balance text-white/80">
+          nous sommes un partenaire de confiance qui transforme les idées en
+          stratégies impactantes. En alliant innovation, créativité et résultats
+          mesurables, nous aidons nos clients à prospérer dans un monde en
+          constante évolution.
+        </p>
+        
+      </div>
       <div className="relative mx-auto max-w-7xl px-6 py-16 md:px-10">
         {/* Heading */}
-        <div className="text-center md:w-2/3 mx-auto">
-          <h2 className="text-balance text-4xl font-extrabold leading-tight tracking-tight md:text-5xl xl:text-6xl  ">
-            Innovation meets strategy,{" "}
-            <span className="text-primary">fueling growth.</span>
-          </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-balance text-white/80">
-            Helping businesses thrive with innovative digital strategies,
-            creative solutions, and measurable outcomes.
-          </p>
-        </div>
 
         {/* Media */}
         <div className="relative mx-auto mt-10 max-w-5xl">
@@ -49,11 +67,12 @@ export default function AboutHeader() {
             <div className="relative overflow-hidden rounded-[1.75rem]">
               {/* Replace with your image */}
               <Image
-                src="/images/about_header.jpg"
+                src="/images/aboutusPage.png"
                 alt="Réunion d'équipe"
                 className="block h-[420px] w-full object-cover md:h-[520px]"
-                width={500}
-                height={300}
+                width={1500}
+                height={1500}
+                priority
               />
             </div>
 

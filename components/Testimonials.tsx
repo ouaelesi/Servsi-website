@@ -19,50 +19,51 @@ export type Testimonial = {
 const DEFAULT_TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "Their platform transformed how we approach campaigns. The intuitive tools and seamless integrations saved us a lot of time.",
-    name: "Jacob Williams",
-    role: "Tech CEO",
-    avatarSrc: "/images/TEAM/3.jpg",
-    initials: "JW",
-  },
-  {
-    quote:
-      "Their marketing approach brought in more foot traffic and online orders. The data-driven insights made all the difference.",
-    name: "Ethan Reynolds",
-    role: "Café Owner",
-    avatarSrc: "/images/TEAM/3.jpg",
+      "La consolidation et l’extension du réseau ont été réalisées avec professionnalisme, en respectant toutes les exigences techniques et de sécurité.",
+    name: "Algérie Poste",
+    role: "",
+    avatarSrc: "/images/partners/AlgeriePoste 1.svg",
     initials: "ER",
   },
   {
     quote:
-      "Their system improved our client engagement and lead conversions. The easy-to-use tools streamlined our entire sales process.",
-    name: "Nathan Carter",
-    role: "Fitness Founder",
+      "Les obligations contractuelles ont été réalisées dans les règles de l’art, apportant une entière satisfaction.",
+    name: "Sonatrach",
+    role: "Division Production (WIFI TFT)",
+    avatarSrc: "/images/partners/Sonatrach.svg",
+    initials: "JW",
+  },
+
+  {
+    quote:
+      "Les obligations ont été accomplies dans les règles de l’art, offrant une entière satisfaction.",
+    name: "Optimum Telecom Algérie",
+    role: "(OTA - ACI)",
     avatarSrc: "/images/TEAM/3.jpg",
     initials: "NC",
   },
   {
     quote:
-      "Their system improved our client engagement and lead conversions. The easy-to-use tools streamlined our entire sales process",
-    name: "Daniel Foster",
-    role: "Real Estate CEO",
+      "Les travaux ont été exécutés de manière professionnelle, avec une entière satisfaction dans la mise à niveau et la mise en conformité du Datacenter.",
+    name: "Groupe SAIDAL",
+    role: "",
     avatarSrc: "/images/TEAM/3.jpg",
     initials: "DF",
   },
   {
     quote:
-      "They refined our brand’s digital presence and increased customer retention. The personalized strategies made a huge impact.",
-    name: "Mitchell Apparel",
+      "Les tâches confiées ont été exécutées correctement et dans les délais, avec un résultat conforme aux attentes.",
+    name: "Fromagerie BEL Algérie",
     role: "Fashion CEO",
     avatarSrc: "/images/TEAM/3.jpg",
     initials: "MA",
   },
   {
     quote:
-      "Their platform enhanced project coordination and design workflow. The advanced tools helped us meet deadlines stress-free.",
-    name: "Lucas Bennett",
-    role: "Architect",
-    avatarSrc: "/images/TEAM/3.jpg",
+      "Les engagements techniques ont été respectés dans les règles de l’art, avec une entière satisfaction.",
+    name: "Optimum Telecom Algérie ",
+    role: "(OTA - ACI)",
+    avatarSrc: "/images/partners/test.svg",
     initials: "LB",
   },
 ];

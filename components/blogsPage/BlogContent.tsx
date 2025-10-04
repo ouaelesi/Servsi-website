@@ -23,34 +23,56 @@ export type PostContentSection = {
 };
 
 const DEFAULT_META: PostMeta = {
-  title: "Creating Content That Converts:\nWriting with Purpose",
+  title:
+    "Comment moderniser son réseau en entreprise : de l’audit au déploiement",
   excerpt:
-    "Discover the keys to writing content that informs, engages, and drives users toward action with clarity, emotion, and brand alignment.",
-  date: "May 24, 2025",
-  category: "Content Creation",
-  heroImage: "/images/blogs/blog.jpg",
+    "De l’audit initial à l’exploitation 24/7, découvrez les étapes clés pour bâtir une infrastructure réseau performante, sécurisée, évolutive et conforme aux standards (ITIL, ISO 27001).",
+  date: "Oct 2025",
+  category: "Réseaux & Infrastructure",
+  heroImage: "/images/about1.jpg",
   author: {
-    name: "Matthew King",
-    avatar: "/images/TEAM/3.jpg",
+    name: "SERVSI — Équipe Réseaux",
+    avatar: "/images/Logo.png",
   },
   content: [
     {
-      title: "Content with a Mission",
-      text: "Content is the engine of digital marketing—but not all content works. If it doesn’t drive action, it’s just noise. Writing with purpose means understanding your audience, offering value, and guiding them toward the next step. In this post, we’ll show you how to create content that converts—whether it’s a blog, landing page, or social caption.",
+      title: "Introduction",
+      text: "La transformation digitale impose de nouvelles exigences aux infrastructures IT. Des réseaux souvent anciens ne répondent plus aux usages modernes ni aux menaces actuelles. Objectif : garantir performance, sécurité, évolutivité et conformité (ITIL, ISO 27001) via une démarche structurée, de l’audit au déploiement opérationnel.",
       images: [],
     },
     {
-      title: "Content with a Mission",
-      text: "Begin with a compelling headline. Hook attention fast and hint at the value inside. Use clear, benefit-driven language. Break up long text with subheadings, bullets, or visuals. Focus on one goal per piece—don’t overwhelm with multiple CTAs. Address pain points and offer practical advice. Add emotion—stories, analogies, and empathy build trust. Include proof points like stats, testimonials, or case studies. Finally, guide readers with a strong, clear CTA: “Download now,” “Book a call,” or “Get your guide.” Track performance and tweak based on results.",
-      images: [
-        "/images/blogs/blog.jpg",
-        "/images/blogs/blog.jpg",
-        "/images/blogs/blog.jpg",
-      ],
+      title: "Étape 1 — L’audit du réseau existant",
+      text: "• Cartographier équipements et flux : actifs (switches, routeurs, firewalls, Wi-Fi), câblage passif (fibre/cuivre), schéma des flux et criticité. • Identifier saturations et vulnérabilités : bande passante insuffisante, absence de redondance, failles de sécurité/segmentation. • Mesurer avec des KPIs : bande passante utilisée, disponibilité/SLA, MTTR, compatibilité cloud/virtualisation/Wi-Fi 6/SD-WAN.",
+      images: [],
     },
     {
-      title: "",
-      text: "",
+      title: "Étape 2 — Définir les besoins et objectifs",
+      text: "• Scalabilité : ajouter utilisateurs/sites/apps sans refonte, ouverture aux techno (SD-WAN, IoT, Wi-Fi 6). • Sécurité : NGFW, SOC 24/7, PRA. • Interopérabilité : data centers, cloud/hybride, virtualisation, smart building. • Expérience utilisateur : accès fluides aux apps, faible latence, continuité de service.",
+      images: [],
+    },
+    {
+      title: "Étape 3 — Conception et choix technologiques",
+      text: "• Connectivité : MPLS (priorisation), SD-WAN (flexibilité/coûts), Wi-Fi 6 (débit/densité), fibre (hauts débits/virtualisation). • Sécurité by design : segmentation, Zero Trust, chiffrement bout-en-bout. • Partenariats : Cisco (réseau), Fortinet (cybersécurité), Dell & VMware (virtualisation/serveurs), Microsoft (cloud/productivité). • Continuité : redondances, failover automatique, tests de résilience réguliers.",
+      images: [],
+    },
+    {
+      title: "Étape 4 — Déploiement & intégration",
+      text: "• Migration progressive par site/service/zone avec bascules planifiées et environnements de test. • Tests de charge/performance (pics visioconf, sauvegardes, accès applicatifs), mesures latence/bande passante/temps de réponse. • Validation des SLA : viser 99,9 % de disponibilité, supervision outillée, rapports de conformité.",
+      images: [],
+    },
+    {
+      title: "Étape 5 — Opérations & amélioration continue",
+      text: "• Supervision 24/7 : NOC/SOC, détection et résolution < 30 min, alertes proactives. • Maintenance proactive : mises à jour, patchs, renouvellement fin de vie. • Suivi KPIs : disponibilité, MTTR, incidents/mois. • Culture d’amélioration continue : revues annuelles, intégration des nouveaux besoins (cloud, IoT, sécurité avancée), apprentissage organisationnel.",
+      images: [],
+    },
+    {
+      title: "Cas pratique — Réseau bancaire (Algérie)",
+      text: "Architecture SD-WAN : −35 % de downtime en 1 an, +50 % de performance applicative via optimisation des flux, sécurité renforcée (SOC local, redondance multi-sites).",
+      images: [],
+    },
+    {
+      title: "Conclusion",
+      text: "Moderniser le réseau est un investissement stratégique pour concilier sécurité, performance et évolutivité. Avec un audit rigoureux, une conception adaptée et un déploiement méthodique, les risques diminuent et la transformation digitale s’accélère. SERVSI accompagne de bout en bout, du câblage passif au data center, avec disponibilité 24/7 et SLA 99,9 %. Prêt à moderniser votre réseau ?",
       images: [],
     },
   ],
@@ -121,8 +143,8 @@ export default function BlogPost({
                 src={meta.author.avatar}
                 alt={meta.author.name}
                 className="h-8 w-8 rounded-full object-cover ring-1 ring-white/20"
-                width={32}
-                height={32}
+                width={1500}
+                height={500}
               />
               <div className="text-sm text-white/90">
                 <span className="font-medium">{meta.author.name}</span>
@@ -144,6 +166,8 @@ export default function BlogPost({
           <div className="overflow-hidden rounded-2xl bg-white ">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <Image
+              width={1500}
+              height={500}
               src={meta.heroImage}
               alt={meta.title}
               className="h-[420px] w-full object-cover sm:h-[520px]"
@@ -167,6 +191,8 @@ export default function BlogPost({
               {section.images &&
                 section.images.map((imgSrc: string, imgIndex: number) => (
                   <Image
+                    width={400}
+                    height={300}
                     key={imgIndex}
                     src={imgSrc}
                     alt={`Blog image ${imgIndex + 1}`}

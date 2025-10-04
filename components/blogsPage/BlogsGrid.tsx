@@ -12,27 +12,10 @@ const DEFAULT_POSTS: Post[] = [
   {
     title: "Creating Content That Converts: Writing with Purpose",
     category: "Content Creation",
-    image: "/images/blogs/blog.jpg",
+    image: "/images/about1.jpg",
     href: "/blogs/creating-content-that-converts",
   },
-  {
-    title: "How to Use Customer Data to Improve Retention",
-    category: "Retention",
-    image: "/images/blogs/blog.jpg",
-    href: "/blogs/customer-data-retention",
-  },
-  {
-    title: "SEO Trends 2025: What to Watch for Greater Visibility",
-    category: "Branding",
-    image: "/images/blogs/blog.jpg",
-    href: "/blogs/seo-trends-2025",
-  },
-  {
-    title: "Why Consistency is the New Currency",
-    category: "Marketing",
-    image: "/images/blogs/blog.jpg",
-    href: "/blogs/consistency-new-currency",
-  },
+
 ];
 
 /**
@@ -55,6 +38,8 @@ export default function BlogGrid({
               <div className="relative overflow-hidden rounded-[20px] bg-gray-100">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <Image
+                width={1000}
+                height={1000}
                   src={p.image}
                   alt={p.title}
                   className="aspect-[1/1] w-full object-cover transition will-change-transform group-hover:scale-[1.02]"

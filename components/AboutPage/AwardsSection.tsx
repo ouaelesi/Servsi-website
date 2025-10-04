@@ -1,31 +1,37 @@
+import Image from "next/image";
 import React from "react";
 
 export type AwardItem = {
   title: string;
   subtitle: string;
   year: string | number;
+  logo: string;
 };
 
 const DEFAULT_AWARDS: AwardItem[] = [
   {
-    title: "Best Digital Marketing Agency",
-    subtitle: "Awarded by Digital Excellence Awards",
+    title: "Fortinet NSE 7 — Network Security Architect",
+    subtitle: "Certification avancée en sécurité réseau",
     year: 2025,
+    logo: "/images/partners/V2/Fortinet_idZhbQEBqi_0 3.svg",
   },
   {
-    title: "Top SEO Innovation Leader",
-    subtitle: "Awarded by Global Search Awards 2024",
+    title: "Cisco CCIE Routing & Switching",
+    subtitle: "Plus haut niveau de certification Cisco",
     year: 2024,
+    logo: "/images/partners/V2/cisco.svg",
   },
   {
-    title: "Most Disruptive Ad Strategy",
-    subtitle: "Recognized by AdWorld Masters",
+    title: "Certified Ethical Hacker (CEH)",
+    subtitle: "Spécialiste en tests d'intrusion et cybersécurité offensive",
     year: 2024,
+    logo: "/images/partners/V2/cisco.svg",
   },
   {
-    title: "Excellence in Brand Growth",
-    subtitle: "Awarded by Digital Impact Summit",
+    title: "VMware VCAP Network Virtualization Design",
+    subtitle: "Expertise en virtualisation et infrastructures cloud",
     year: 2023,
+    logo: "/images/partners/V2/vmware.svg",
   },
 ];
 
@@ -38,9 +44,8 @@ const DEFAULT_AWARDS: AwardItem[] = [
  */
 export default function AwardsSection({
   items = DEFAULT_AWARDS,
-  title = "Awards and Recognitions",
-  subtitle =
-    "Recognized for delivering transformative digital solutions that drive growth and industry impact.",
+  title = "Partenariats & Reconnaissances",
+  subtitle = "Un haut niveau de compétences techniques validé par des certifications internationales reconnues.",
 }: {
   items?: AwardItem[];
   title?: string;
@@ -78,11 +83,23 @@ export default function AwardsSection({
             >
               <div className="flex items-start justify-between gap-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-white md:text-xl">{a.title}</h3>
+                  <h3 className="text-lg font-semibold text-white md:text-xl">
+                    {a.title}
+                  </h3>
                   <p className="mt-1 text-sm text-white/70">{a.subtitle}</p>
                 </div>
                 <div className="shrink-0 rounded-xl  px-3 py-1.5 text-sm font-semibold text-white/90 ">
-                  {a.year}
+                  <div className="justify-end flex"> {a.year}</div>
+
+                  <div>
+                    <Image
+                      src={a.logo}
+                      alt={a.title}
+                      width={50}
+                      height={50}
+                      className="grayscale w-15 mt-4 "
+                    />
+                  </div>
                 </div>
               </div>
             </article>

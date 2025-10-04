@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 /**
@@ -23,8 +24,20 @@ export default function HeroServsi() {
           agilité, expertise et proximité.
         </h1>
       </div>
+      <Image
+        className="absolute -right-10 top-5  md:w-32 w-25"
+        src="/images/right_side_logo.png"
+        width={200}
+        height={200}
+        alt="servsi logo"
+      />
+      <Image
+        className="absolute -left-10 bottom-5 md:w-32 w-25"
+        src="/images/left_side_logo.png"
+        width={200}
+        height={200}
+        alt="servsi logo"
+      />
     </section>
   );
 }
-
-
