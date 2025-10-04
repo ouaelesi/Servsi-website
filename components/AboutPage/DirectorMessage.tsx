@@ -20,12 +20,12 @@ export default function DirectorMessage() {
         {/* Texte */}
         <div className="flex-1">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Mot du directeur <span className="">"Houari KHALDI"</span>
+            Mot du directeur <span className="">&quot;Houari KHALDI&quot;</span>
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             Bienvenue sur le site officiel de <strong>SERVSI</strong>. Je suis 
             <strong> KHALDI Houari</strong>, Directeur Général de notre société, spécialisée 
-            dans l&quot;installation et l&quot;intégration des réseaux informatiques ainsi que les 
+            dans l&apos;installation et l&apos;intégration des réseaux informatiques ainsi que les 
             solutions de sécurité physique. Notre priorité est de fournir à nos clients 
             des services de haute qualité, innovants et adaptés à leurs besoins spécifiques.
           </p>
@@ -38,8 +38,8 @@ export default function DirectorMessage() {
           <p className="text-gray-700 leading-relaxed">
             Nous sommes déterminés à continuer à innover et à renforcer notre position 
             en tant que partenaire de confiance dans le domaine des réseaux et de la 
-            sécurité en Algérie. N&quot;hésitez pas à nous contacter pour toute demande ou 
-            collaboration. Merci de votre confiance et bienvenue dans l&quot;univers de SERVSI.
+            sécurité en Algérie. N&apos;hésitez pas à nous contacter pour toute demande ou 
+            collaboration. Merci de votre confiance et bienvenue dans l&apos;univers de SERVSI.
           </p>
         </div>
       </div>
