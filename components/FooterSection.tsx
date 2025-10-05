@@ -129,8 +129,8 @@ export default function FooterSection() {
         {/* bottom row */}
         <div className="mt-6 flex flex-col items-center justify-between gap-4 text-white/70 md:flex-row">
           <p>Copyright © 2025 — All Right Reserved</p>
-          <p>Created by IQUBE AGENCY 2025</p>
-        </div>
+          <p className="flex  gap-2 ">Created by <Image src="/iqube.png" width={100} height={100} alt="iqube logo" className="grayscale opacity-80"></Image></p>
+        </div> 
       </div>
     </footer>
   );

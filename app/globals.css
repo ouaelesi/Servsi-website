@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #002329;
-  --primary: #8BE3A7;
+  --primary: #48B770;
 }
 
 @theme inline {
@@ -16,7 +16,12 @@
   :root {
     --background: #ffffff;
     --foreground: #002329;
-    --primary: #8BE3A7
+    --primary: #48B770
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 

@@ -15,14 +15,10 @@ const DEFAULT_PARTNERS: Partner[] = [
   { name: "Aten", src: "/images/partners/aten-seeklogo-2 1.svg", href: "#" },
   {
     name: "Axis Communications",
-    src: "/images/partners/Axis Communications_id4Wyb57WO_0 1.svg",
+    src: "/images/partners/axis.svg",
     href: "#",
   },
-  {
-    name: "Banque du Golf Algérie",
-    src: "/images/partners/Banque_du_Golf_Algérie 1.svg",
-    href: "#",
-  },
+
   {
     name: "Banque du Golf Algérie",
     src: "/images/partners/Banque_du_Golf_Algérie.svg",
@@ -66,7 +62,6 @@ const DEFAULT_PARTNERS: Partner[] = [
     src: "/images/partners/LG Electronics_Logo_0 1.svg",
     href: "#",
   },
-  { name: "Logo entp 2", src: "/images/partners/Logo_entp 2.svg", href: "#" },
   { name: "Logo entp", src: "/images/partners/Logo_entp.svg", href: "#" },
   { name: "Microsoft", src: "/images/partners/microsoft.svg", href: "#" },
   { name: "Milstone", src: "/images/partners/milstone.svg", href: "#" },

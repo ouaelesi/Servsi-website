@@ -4,7 +4,7 @@ import React, { useState } from "react";
 export default function ContactForm() {
   const [name, setName] = useState("Jane Smith");
   const [email, setEmail] = useState("jane@framer.com");
-  const [service, setService] = useState("Business Consultation");
+  const [service, setService] = useState("Consultation professionnelle");
   const [message, setMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [status, setStatus] = useState<string | null>(null);
@@ -15,29 +15,29 @@ export default function ContactForm() {
     setStatus(null);
 
     try {
-      // Simulate API call — replace with your endpoint
+      // Simulation d’un appel API — à remplacer par ton endpoint réel
       await new Promise((r) => setTimeout(r, 800));
-      setStatus("Merci ! Votre message a bien été envoyé.");
+      setStatus("✅ Merci ! Votre message a bien été envoyé.");
       setMessage("");
     } catch (err) {
-      setStatus("Désolé, l'envoi a échoué. Réessayez.");
+      setStatus("❌ Désolé, l’envoi a échoué. Veuillez réessayer.");
     } finally {
       setSubmitting(false);
     }
   }
 
   return (
-    <section className="mx-auto max-w-3xl px-4 py-12">
+    <section className="mx-auto w-full px-4 py-12">
       <form
         onSubmit={onSubmit}
-        className="rounded-[1.75rem] bg-gray-50 p-4  ring-black/5 md:p-8"
+        className="rounded-[1.75rem] bg-[#F5F5F5] p-4 ring-black/5 md:p-8"
       >
-        {/* Name */}
+        {/* Nom complet */}
         <label
           htmlFor="name"
           className="block md:text-[15px] text-sm font-medium text-gray-900"
         >
-          Enter your full name.
+          Entrez votre nom complet :
         </label>
         <input
           id="name"
@@ -47,7 +47,7 @@ export default function ContactForm() {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="mt-2 w-full text-sm   rounded-xl bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400   focus:outline-none focus:ring-2 focus:ring-emerald-400"
+          className="mt-2 w-full text-sm rounded-xl bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400"
           placeholder="Jane Smith"
         />
 
@@ -56,7 +56,7 @@ export default function ContactForm() {
           htmlFor="email"
           className="mt-6 block md:text-[15px] text-sm font-medium text-gray-900"
         >
-          Enter a valid email for a response.
+          Entrez une adresse e-mail valide pour recevoir une réponse :
         </label>
         <input
           id="email"
@@ -66,8 +66,8 @@ export default function ContactForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="mt-2 w-full text-sm  rounded-xl bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400   focus:outline-none focus:ring-2 focus:ring-emerald-400"
-          placeholder="jane@company.com"
+          className="mt-2 w-full text-sm rounded-xl bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+          placeholder="exemple@entreprise.com"
         />
 
         {/* Service */}
@@ -75,20 +75,20 @@ export default function ContactForm() {
           htmlFor="service"
           className="mt-6 block md:text-[15px] text-sm font-medium text-gray-900"
         >
-          Which services are you interested in?
+          Quel type de service recherchez-vous ?
         </label>
         <select
           id="service"
           name="service"
           value={service}
           onChange={(e) => setService(e.target.value)}
-          className="mt-2 w-full text-sm  appearance-none rounded-xl bg-white px-4 py-3 text-gray-900  "
+          className="mt-2 w-full text-sm appearance-none rounded-xl bg-white px-4 py-3 text-gray-900"
         >
-          <option>Business Consultation</option>
+          <option>Consultation professionnelle</option>
           <option>Cloud & Infrastructure</option>
-          <option>Security Audit</option>
+          <option>Audit de sécurité</option>
           <option>Maintenance & Support</option>
-          <option>Custom Development</option>
+          <option>Développement sur mesure</option>
         </select>
 
         {/* Message */}
@@ -96,7 +96,7 @@ export default function ContactForm() {
           htmlFor="message"
           className="mt-6 block md:text-[15px] text-sm font-medium text-gray-900"
         >
-          Share any details or specific requirements.
+          Partagez les détails ou vos besoins spécifiques :
         </label>
         <textarea
           id="message"
@@ -104,8 +104,8 @@ export default function ContactForm() {
           rows={6}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Your message..."
-          className="mt-2 w-full text-sm  resize-y rounded-xl bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400   focus:outline-none  "
+          placeholder="Votre message..."
+          className="mt-2 w-full text-sm resize-y rounded-xl bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none"
         />
 
         {/* CTA */}
@@ -113,17 +113,21 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full rounded-full bg-primary px-6 py-4 text-base font-semibold text-black  transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60"
+            className="w-full rounded-full bg-primary px-6 py-4 text-base font-semibold text-black transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {submitting ? "Submitting…" : "Submit"}
+            {submitting ? "Envoi en cours..." : "Obtenir mon devis gratuit"}
           </button>
         </div>
 
         {status && (
-          <p className="mt-3 text-center text-sm text-gray-600" role="status">
+          <p className="mt-3 text-center text-sm text-gray-700" role="status">
             {status}
           </p>
         )}
+
+        <div className="mt-3 flex items-center gap-2 text-xs text-slate-500">
+          <span>🔒 +95% de satisfaction client</span>
+        </div>
       </form>
     </section>
   );

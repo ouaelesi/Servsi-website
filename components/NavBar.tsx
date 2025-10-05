@@ -17,8 +17,8 @@ type Props = {
  */
 export default function Navbar({
   links = [
-    { label: "Services", href: "/services" },
-    { label: "Réalisations", href: "/work" },
+    { label: "Services", href: "/#services" },
+    { label: "Réalisations", href: "/#work" },
     { label: "Témoignages", href: "/#testimonials" },
     { label: "À propos", href: "/about" },
     { label: "Blog", href: "/blogs" },

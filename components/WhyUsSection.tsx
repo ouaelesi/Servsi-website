@@ -77,7 +77,7 @@ export default function WhyUsSection() {
   ];
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#002329] text-white">
+    <section className="relative isolate overflow-hidden bg-[#002329] text-white" id="work">
       {/* background grid */}
       <div
         aria-hidden
@@ -119,7 +119,7 @@ export default function WhyUsSection() {
             />
             <div className="relative overflow-hidden rounded-[1.75rem]">
               <Image
-                src="/images/meeting.png"
+                src="/images/aboutusPage.png"
                 alt="Réunion d'équipe"
                 className="block h-[420px] w-full object-cover md:h-[520px]"
                 width={1500}
@@ -144,7 +144,7 @@ export default function WhyUsSection() {
                   <Sparkles className="h-4 w-4 text-emerald-300" />
                 </span>
                 <span className="text-sm font-medium text-white/90">
-                  15 ans d&apos;expertise
+                  10 ans d&apos;experience
                 </span>
               </div>
             </motion.div>
@@ -182,7 +182,7 @@ export default function WhyUsSection() {
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black">
                   <Play className="h-4 w-4 text-primary" />
                 </span>
-                Inside our process
+                À l&apos;intérnieur de notre precessus
               </button>
             </div>
           </div>
@@ -198,21 +198,27 @@ export default function WhyUsSection() {
         >
           <motion.div variants={fadeUp}>
             <div className="text-4xl font-extrabold">
-              <Counter to={98} suffix="%" />
+              <Counter to={30} suffix="%" />
             </div>
-            <div className="mt-2 text-white/70">Taux de réussite client</div>
+            <div className="mt-2 text-white/70">
+              Certifications internationales obtenues{" "}
+            </div>
           </motion.div>
           <motion.div variants={fadeUp}>
             <div className="text-4xl font-extrabold">
-              <Counter to={200} suffix="+" />
+              <Counter to={50} suffix="+" />
             </div>
-            <div className="mt-2 text-white/70">Projets IT réalisés</div>
+            <div className="mt-2 text-white/70">
+              Partenaires & clients stratégiques{" "}
+            </div>
           </motion.div>
           <motion.div variants={fadeUp}>
             <div className="text-4xl font-extrabold">
-              <Counter to={24} suffix="/7" />
+              <Counter to={500} />
             </div>
-            <div className="mt-2 text-white/70">Support client</div>
+            <div className="mt-2 text-white/70">
+              Équipements sécurisés et déployés
+            </div>
           </motion.div>
         </motion.div>
       </div>
@@ -221,7 +227,7 @@ export default function WhyUsSection() {
       <div className="relative mx-auto max-w-7xl px-6 py-16 md:px-10">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-balance text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
-            Pourquoi choisir Servsi
+            Pourquoi choisir <span className="text-primary">SERVSI</span>
           </h2>
           <p className="mt-4 text-white/80">
             Voici comment Servsi offre plus de valeur, de clarté et de résultats
@@ -266,7 +272,7 @@ export default function WhyUsSection() {
               <Image
                 src="/images/servsi_logo.svg"
                 alt="Servsi logo"
-                className="w-25"
+                className="w-25 mb-1"
                 width={200}
                 height={50}
               ></Image>
@@ -276,7 +282,14 @@ export default function WhyUsSection() {
                 {positives.map((t, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full">
-                      <CheckCircle2 className="h-4 w-4 text-white" />
+                      {/* <CheckCircle2 className="h-4 w-4 text-white" /> */}
+                      <Image
+                        src="/images/check.png"
+                        width={50}
+                        height={50}
+                        className="w-4 h-4"
+                        alt="check servsi logo"
+                      ></Image>
                     </span>
                     <span className="text-white/95">{t}</span>
                   </li>

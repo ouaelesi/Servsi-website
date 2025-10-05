@@ -39,7 +39,7 @@ const DEFAULT_TESTIMONIALS: Testimonial[] = [
       "Les obligations ont été accomplies dans les règles de l’art, offrant une entière satisfaction.",
     name: "Optimum Telecom Algérie",
     role: "(OTA - ACI)",
-    avatarSrc: "/images/TEAM/3.jpg",
+       avatarSrc: "/images/partners/opt.png",
     initials: "NC",
   },
   {
@@ -47,7 +47,7 @@ const DEFAULT_TESTIMONIALS: Testimonial[] = [
       "Les travaux ont été exécutés de manière professionnelle, avec une entière satisfaction dans la mise à niveau et la mise en conformité du Datacenter.",
     name: "Groupe SAIDAL",
     role: "",
-    avatarSrc: "/images/TEAM/3.jpg",
+    avatarSrc: "/images/partners/Saidal_Logo.png",
     initials: "DF",
   },
   {
@@ -55,7 +55,7 @@ const DEFAULT_TESTIMONIALS: Testimonial[] = [
       "Les tâches confiées ont été exécutées correctement et dans les délais, avec un résultat conforme aux attentes.",
     name: "Fromagerie BEL Algérie",
     role: "Fashion CEO",
-    avatarSrc: "/images/TEAM/3.jpg",
+    avatarSrc: "/images/partners/bel.png",
     initials: "MA",
   },
   {
@@ -70,12 +70,12 @@ const DEFAULT_TESTIMONIALS: Testimonial[] = [
 
 function Avatar({ src, initials }: { src?: string; initials?: string }) {
   return (
-    <div className="h-12 w-12 overflow-hidden rounded-full bg-gray-200 shadow-sm ring-1 ring-black/5">
+    <div className="h-12 w-12 overflow-hidden rounded-full flex flex-col justify-center bg-gray-200 shadow-sm ring-1 ring-black/5">
       {src ? (
         <Image
           src={src}
           alt=""
-          className="h-full w-full object-cover"
+          className="w-full my-auto block"
           width={48}
           height={48}
         />

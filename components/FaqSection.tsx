@@ -7,7 +7,7 @@ export type FaqItem = { q: string; a: string };
 const DEFAULT_FAQ: FaqItem[] = [
   {
     q: "Quels types de solutions IT proposez-vous ?",
-    a: "SaaS is subscription-based and centrally hosted. Users pay a recurring fee to access the software over the internet, eliminating the need for upfront costs and ongoing maintenance.",
+    a: "Nous proposons des solutions IT sur mesure : développement d’applications web et mobiles, intégration cloud, cybersécurité et automatisation d’infrastructures.",
   },
   {
     q: "Comment garantissez-vous la sécurité de mes données ?",
@@ -123,8 +123,10 @@ export default function FAQAccordion({
             <motion.div
               key={i}
               variants={item}
+              layout
               className="rounded-2xl bg-gray-50 ring-1 ring-black/5"
             >
+              {/* Header button */}
               <motion.button
                 type="button"
                 className="flex w-full items-center justify-between gap-6 rounded-2xl px-6 py-5 text-left"
@@ -168,21 +170,29 @@ export default function FAQAccordion({
                 </div>
               </motion.button>
 
-              {/* Expand / collapse */}
+              {/* Expand / collapse content */}
               <AnimatePresence initial={false}>
                 {isOpen && (
                   <motion.div
                     id={contentId}
                     key="content"
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
+                    initial={{ height: 0 }}
+                    animate={{ height: "auto" }}
+                    exit={{ height: 0 }}
                     transition={{ duration: 0.28, ease }}
-                    className="-mt-2 overflow-hidden px-6 pb-6"
+                    className="overflow-hidden"
                   >
-                    <p className="text-xs leading-relaxed text-gray-600 md:text-sm">
-                      {itemData.a}
-                    </p>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.2, ease }}
+                      className="px-6 pb-6"
+                    >
+                      <p className="text-xs leading-relaxed text-gray-600 md:text-sm">
+                        {itemData.a}
+                      </p>
+                    </motion.div>
                   </motion.div>
                 )}
               </AnimatePresence>

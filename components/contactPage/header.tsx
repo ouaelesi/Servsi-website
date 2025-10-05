@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function ContactHeader() {
@@ -14,17 +15,35 @@ export default function ContactHeader() {
           backgroundPosition: "-1px -1px",
         }}
       />
+      <div className="pointer-events-none select-none absolute -right-10 top-5">
+        <Image
+          className="md:w-48 w-24"
+          src="/images/right_side_logo.png"
+          width={200}
+          height={200}
+          alt="servsi logo"
+        />
+      </div>
+      <div className="pointer-events-none select-none absolute -left-10 bottom-5">
+        <Image
+          className="md:w-48 w-24"
+          src="/images/left_side_logo.png"
+          width={200}
+          height={200}
+          alt="servsi logo"
+        />
+      </div>
 
       <div className="relative mx-auto max-w-7xl px-6 py-16 md:px-10">
         {/* Heading */}
         <div className="text-center md:w-2/3 mx-auto">
           <h2 className="text-balance text-4xl font-extrabold leading-tight tracking-tight md:text-5xl xl:text-6xl  ">
-            Let&apos;s connect & bring your{" "}
-            <span className="text-primary">ideas to life.</span>
+            Démarrez votre <span className="text-primary">projet</span> dès{" "}
+            <span className="text-primary">aujourd&apos;hui </span>
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-balance text-white/80">
-            We’d love to hear from you! Fill out the form below, and let’s
-            discuss how we can help you achieve your goals.
+            Nous vous accompagnons avec des solutions IT certifiées et un
+            support réactif.
           </p>
         </div>
       </div>

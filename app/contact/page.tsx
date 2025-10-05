@@ -1,5 +1,9 @@
-import ContactForm from "@/components/contactPage/ContactForm";
+import ContactSection from "@/components/contactPage/ContactSection";
 import ContactHeader from "@/components/contactPage/header";
+import Partners from "@/components/contactPage/Partners";
+import TrustedBySection from "@/components/contactPage/TrustedBy";
+import FAQAccordion from "@/components/FaqSection";
+import PartnersSlider from "@/components/PartnersSlider";
 import { Montserrat } from "next/font/google";
 import React from "react";
 
@@ -12,9 +16,12 @@ const montserrat = Montserrat({
 
 export default function ContactPage() {
   return (
-    <div className={montserrat.className}>
+    <div className={montserrat.className + " bg-[#FAFAFA]"}>
       <ContactHeader />
-      <ContactForm />
+      <ContactSection />
+      <Partners />
+      <TrustedBySection/>
+      <FAQAccordion />
     </div>
   );
 }
