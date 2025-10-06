@@ -47,8 +47,8 @@ export default function StrategySection() {
             src="/images/about2.jpg"
             alt="Team collaborating around a table"
             className="h-[280px] w-full max-w-[420px] rounded-2xl object-cover shadow-md ring-1 ring-black/5 md:h-[320px]"
-            width={420}
-            height={320}
+            width={1420}
+            height={1320}
           />
         </div>
       </div>
@@ -64,8 +64,8 @@ export default function StrategySection() {
             src="/images/about1.jpg"
             alt="Presenter discussing analytics with team"
             className="h-[300px] w-full max-w-[420px] rounded-2xl object-cover shadow-md ring-1 ring-black/5 md:h-[340px]"
-            width={560}
-            height={340}
+            width={1560}
+            height={1340}
           />
         </div>
 

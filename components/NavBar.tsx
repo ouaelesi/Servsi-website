@@ -1,9 +1,17 @@
 "use client";
+import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
 export type NavLink = { label: string; href: string };
+
+const montserrat = Montserrat({
+  weight: ["300", "400", "500", "700"], // Example weights
+  subsets: ["latin"],
+  display: "swap", // Optimizes font loading
+  variable: "--font-montserrat", // Optional: for CSS variables
+});
 
 type Props = {
   links?: NavLink[];
@@ -28,11 +36,19 @@ export default function Navbar({
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-foreground text-white">
+    <header
+      className={`${montserrat.variable} sticky top-0 z-50 w-full bg-foreground text-white`}
+    >
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2">
-         <Image src="/images/servsi_logo.svg" width={200} height={50} alt="logo" className="w-30" />
+          <Image
+            src="/images/servsi_logo.svg"
+            width={200}
+            height={50}
+            alt="logo"
+            className="w-30"
+          />
         </Link>
 
         {/* Desktop links */}
@@ -55,7 +71,7 @@ export default function Navbar({
         <div className="hidden md:block">
           <Link
             href={cta.href}
-            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2 text-sm font-semibold text-black shadow ring-1 ring-emerald-500/40 transition hover:brightness-95"
+            className="inline-flex cursor-pointer items-center justify-center rounded-full bg-primary px-6 py-2 text-sm font-semibold text-black shadow ring-1 ring-emerald-500/40 transition hover:brightness-95"
           >
             {cta.label}
           </Link>
@@ -108,7 +124,7 @@ export default function Navbar({
             <li key={l.href}>
               <Link
                 href={l.href}
-                className="block rounded-md px-3 text-center py-2 hover:bg-white/5"
+                className="block rounded-md px-3 cursor-pointer text-center py-2 hover:bg-white/5"
                 onClick={() => setOpen(false)}
               >
                 {l.label}
@@ -118,7 +134,7 @@ export default function Navbar({
           <li className="mt-2 ">
             <Link
               href={cta.href}
-              className="block mx-auto text-center w-2/3 items-center  justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-black shadow ring-1 ring-emerald-500/40"
+              className="block mx-auto text-center w-2/3 items-center cursor-pointer justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-black shadow ring-1 ring-emerald-500/40"
               onClick={() => setOpen(false)}
             >
               {cta.label}

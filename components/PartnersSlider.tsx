@@ -48,7 +48,7 @@ const DEFAULT_PARTNERS: Partner[] = [
     src: "/images/partners/Fortinet_idZhbQEBqi_0 1.svg",
     href: "#",
   },
-  { name: "Huawei", src: "/images/partners/huawei-seeklogo 1.svg", href: "#" },
+  { name: "Huawei", src: "/images/partners/huawei.png", href: "#" },
   { name: "Image 456", src: "/images/partners/image 456.svg", href: "#" },
   { name: "Image 457", src: "/images/partners/image 457.svg", href: "#" },
   { name: "Image 458", src: "/images/partners/image 458.svg", href: "#" },

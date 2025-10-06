@@ -21,7 +21,7 @@ export default function CtaBanner({
   subtitle =
     "Confiez vos systèmes à des experts et assurez la sécurité, la performance et la continuité de vos opérations.",
   ctaLabel = "Découvrir nos services",
-  ctaHref = "/services",
+  ctaHref = "/#services",
   className = "",
 }: Props) {
   return (
@@ -51,8 +51,8 @@ export default function CtaBanner({
           <div className="mt-8 flex justify-center">
             <Link
               href={ctaHref}
-              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2 text-base font-semibold text-black shadow-lg ring-1 ring-emerald-500/40 transition hover:brightness-95 md:px-8 md:py-3 md:text-md"
-            >
+              className="inline-flex items-center cursor-pointer justify-center rounded-full bg-primary px-6 py-2 text-base font-semibold text-black shadow-lg ring-1 ring-emerald-500/40 transition hover:brightness-95 md:px-8 md:py-3 md:text-md"
+            > 
               {ctaLabel}
             </Link>
           </div>

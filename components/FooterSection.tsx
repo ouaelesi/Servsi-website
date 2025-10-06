@@ -58,12 +58,13 @@ export default function FooterSection() {
               />
               <button
                 type="submit"
-                className="whitespace-nowrap md:block hidden rounded-xl bg-primary px-5 py-3 font-medium text-black shadow ring-1 ring-emerald-500/40 transition hover:brightness-95"
+                className="whitespace-nowrap cursor-pointer md:block hidden rounded-xl bg-primary px-5 py-3 font-medium text-black shadow ring-1 ring-emerald-500/40 transition hover:brightness-95"
               >
                 Recevoir les alertes
               </button>
-                <button
+              <button
                 type="submit"
+                aria-label="Recevoir les alertes"
                 className="whitespace-nowrap block md:hidden rounded-xl bg-primary px-3 py-3 font-medium text-black shadow ring-1 ring-emerald-500/40 transition hover:brightness-95"
               >
                 <Send className="h-5 w-5" />
@@ -82,18 +83,28 @@ export default function FooterSection() {
               </div>
               <ul className="mt-4 space-y-3 text-white/80">
                 <li>
-                  <Link href="/services" className="hover:text-white">
+                  <Link href="/#services" className="hover:text-white">
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/team" className="hover:text-white">
-                    Team
+                  <Link href="/#work" className="hover:text-white">
+                    Réalisations
                   </Link>
                 </li>
                 <li>
-                  <Link href="/testimonials" className="hover:text-white">
-                    Testimonials
+                  <Link href="/#testimonials" className="hover:text-white">
+                    Témoignages
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="hover:text-white">
+                    À propos
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blogs" className="hover:text-white">
+                    Blog
                   </Link>
                 </li>
               </ul>
@@ -104,15 +115,11 @@ export default function FooterSection() {
               </div>
               <ul className="mt-4 space-y-3 text-white/80">
                 <li>
-                  <Link href="/faqs" className="hover:text-white">
+                  <Link href="/#faq" className="hover:text-white">
                     FAQ&apos;s
                   </Link>
                 </li>
-                <li>
-                  <Link href="/404" className="hover:text-white">
-                    404
-                  </Link>
-                </li>
+               
                 <li>
                   <Link href="/contact" className="hover:text-white">
                     Contact
@@ -129,8 +136,17 @@ export default function FooterSection() {
         {/* bottom row */}
         <div className="mt-6 flex flex-col items-center justify-between gap-4 text-white/70 md:flex-row">
           <p>Copyright © 2025 — All Right Reserved</p>
-          <p className="flex  gap-2 ">Created by <Image src="/iqube.png" width={100} height={100} alt="iqube logo" className="grayscale opacity-80"></Image></p>
-        </div> 
+          <p className="flex  gap-2 ">
+            Created by{" "}
+            <Image
+              src="/iqube.png"
+              width={100}
+              height={100}
+              alt="iqube logo"
+              className="grayscale opacity-80"
+            ></Image>
+          </p>
+        </div>
       </div>
     </footer>
   );

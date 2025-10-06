@@ -23,7 +23,7 @@ export default function TrustedBySection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
             Ils Nous Font Confiance
           </h2>
-          <p className="mt-3 text-slate-600">
+          <p className="mt-3 ">
             De grandes entreprises collaborent avec nous
           </p>
         </div>
@@ -51,13 +51,13 @@ export default function TrustedBySection() {
         {/* Divider */}
 
         {/* Stats */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center mt-25">
+        <div className="grid md:w-4/5 mx-auto grid-cols-1 sm:grid-cols-3 gap-8 text-center mt-25">
           <div className="flex flex-col items-center">
             <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-full bg-slate-100 text-slate-700">
               <MonitorSmartphone className="h-6 w-6" aria-hidden="true" />
             </div>
             <div className="text-2xl font-extrabold text-slate-900">+200</div>
-            <div className="mt-1 text-sm text-slate-600">
+            <div className="mt-1 text-md font-medium ">
               projets IT réussis
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function TrustedBySection() {
               <Factory className="h-6 w-6" aria-hidden="true" />
             </div>
             <div className="text-2xl font-extrabold text-slate-900">+15</div>
-            <div className="mt-1 text-sm text-slate-600">
+            <div className="mt-1 text-md font-medium ">
               ans d’expertise cumulée
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function TrustedBySection() {
               <Workflow className="h-6 w-6" aria-hidden="true" />
             </div>
             <div className="text-2xl font-extrabold text-slate-900">+10</div>
-            <div className="mt-1 text-sm text-slate-600">secteurs couverts</div>
+            <div className="mt-1 text-md font-medium ">secteurs couverts</div>
           </div>
         </div>
       </div>

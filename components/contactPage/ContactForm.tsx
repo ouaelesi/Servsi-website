@@ -113,7 +113,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full rounded-full bg-primary px-6 py-4 text-base font-semibold text-black transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60"
+            className="w-full cursor-pointer rounded-full bg-primary px-6 py-4 text-base font-semibold text-black transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {submitting ? "Envoi en cours..." : "Obtenir mon devis gratuit"}
           </button>

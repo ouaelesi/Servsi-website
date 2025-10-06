@@ -144,8 +144,8 @@ export default function HeroSection() {
                   src="/images/gd.png"
                   alt="Réunion d'équipe"
                   className="block  w-full object-cover "
-                  width={1000}
-                  height={700}
+                  width={1500}
+                  height={1000}
                   priority
                 />
               </div>
@@ -158,7 +158,7 @@ export default function HeroSection() {
                 viewport={{ once: true, amount: 0.4 }}
                 className="absolute bottom-0 -translate-y-1/2 sm:block md:right-0"
               >
-                <div className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 backdrop-blur-sm ">
+                <div className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 ring-1 ring-white/15 backdrop-blur-sm ">
                   <span className="flex h-6 w-6 items-center justify-center rounded-lg">
                     <Sparkles className="h-4 w-4 text-emerald-300 " />
                   </span>
@@ -176,7 +176,7 @@ export default function HeroSection() {
                 viewport={{ once: true, amount: 0.4 }}
                 className="absolute right-0 top-2/3 -translate-y-1/2 sm:block md:-right-10 md:top-1/2"
               >
-                <div className="inline-flex items-center rounded-full bg-white/10 px-2 py-2 backdrop-blur-sm">
+                <div className="inline-flex items-center rounded-full bg-white/10 px-2 py-2  ring-1 ring-white/15 backdrop-blur-sm">
                   <span className="flex h-8 w-8 items-center justify-center rounded-lg">
                     <Smile className="h-6 w-6 text-emerald-300" />
                   </span>
@@ -191,8 +191,8 @@ export default function HeroSection() {
                 viewport={{ once: true, amount: 0.4 }}
                 className="absolute -top-10 z-40 w-[270px] max-w-[70vw] md:-left-3"
               >
-                <div className="rounded-2xl bg-white/10 p-2 text-white/90 backdrop-blur-md ring-1 ring-white/15 md:p-5">
-                  <div className="mb-2 flex items-center gap-2">
+                <div className="rounded-2xl bg-white/10 p-2 text-white/90 backdrop-blur-md ring-1 ring-white/15 md:px-5 py-3">
+                  <div className=" flex items-center gap-2">
                     <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-400/15 ring-1 ring-emerald-400/30">
                       <Zap className="h-4 w-4 text-emerald-300" />
                     </span>

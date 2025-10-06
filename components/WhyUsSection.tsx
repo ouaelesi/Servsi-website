@@ -178,7 +178,7 @@ export default function WhyUsSection() {
 
             {/* CTA */}
             <div className="absolute left-1/2 bottom-6 -translate-x-1/2">
-              <button className="inline-flex min-w-[200px] items-center gap-2 rounded-full bg-primary px-5 py-3 text-xs font-semibold text-black shadow-lg transition hover:brightness-95">
+              <button className="cursor-pointer inline-flex min-w-[200px] items-center gap-2 rounded-full bg-primary px-5 py-3 text-xs font-medium text-black shadow-lg transition hover:brightness-95">
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black">
                   <Play className="h-4 w-4 text-primary" />
                 </span>

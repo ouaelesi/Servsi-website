@@ -93,7 +93,7 @@ export default function FAQAccordion({
   const sectionId = useId();
 
   return (
-    <section className="mx-auto max-w-4xl px-6 py-16 md:px-8">
+    <section className="mx-auto max-w-4xl px-6 py-16 md:px-8" id="faq">
       {/* Heading */}
       <motion.div
         variants={fadeUp}
@@ -129,7 +129,7 @@ export default function FAQAccordion({
               {/* Header button */}
               <motion.button
                 type="button"
-                className="flex w-full items-center justify-between gap-6 rounded-2xl px-6 py-5 text-left"
+                className="flex w-full items-center justify-between cursor-pointer gap-6 rounded-2xl px-6 py-5 text-left"
                 aria-expanded={isOpen}
                 aria-controls={contentId}
                 onClick={() => setOpen(isOpen ? null : i)}

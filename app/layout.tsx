@@ -26,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable}`}>
-      <body className="scroll-smooth "> 
+    <html lang="en">
+      <body   className={`${montserrat.variable}`}> 
         <Navbar />
         {children}
         <FooterSection />
