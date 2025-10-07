@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export type Author = {
@@ -110,8 +111,8 @@ export default function BlogPost({
         <div className="relative mx-auto max-w-4xl px-6 pt-10 pb-28">
           {/* back */}
           <div className="mb-4">
-            <a
-              href="#"
+            <Link
+              href="/blogs"
               className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm text-white/90 ring-1 ring-white/15 backdrop-blur-sm hover:bg-white/15"
             >
               <svg
@@ -126,7 +127,7 @@ export default function BlogPost({
               >
                 <path d="M15 18l-6-6 6-6" />
               </svg>
-            </a>
+            </Link>
           </div>
 
           <h1 className="text-pretty text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl">

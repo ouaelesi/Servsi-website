@@ -8,6 +8,7 @@ export type Partner = {
   name: string;
   src: string;
   href?: string;
+  isLarge?: boolean;
 };
 
 const DEFAULT_PARTNERS: Partner[] = [
@@ -35,6 +36,7 @@ const DEFAULT_PARTNERS: Partner[] = [
     name: "Dormakaba",
     src: "/images/partners/Dormakaba_idTpCNOBFD_1 1.svg",
     href: "#",
+    isLarge: true,
   },
   {
     name: "ELKA-Torantriebe",
@@ -42,11 +44,17 @@ const DEFAULT_PARTNERS: Partner[] = [
     href: "#",
   },
   { name: "F5", src: "/images/partners/F5_Logo_0 1.svg", href: "#" },
-  { name: "Forcepoint", src: "/images/partners/forcepoint.svg", href: "#" },
+  {
+    name: "Forcepoint",
+    src: "/images/partners/forcepoint.svg",
+    href: "#",
+    isLarge: true,
+  },
   {
     name: "Fortinet",
     src: "/images/partners/Fortinet_idZhbQEBqi_0 1.svg",
     href: "#",
+    isLarge: true,
   },
   { name: "Huawei", src: "/images/partners/huawei.png", href: "#" },
   { name: "Image 456", src: "/images/partners/image 456.svg", href: "#" },
@@ -67,13 +75,14 @@ const DEFAULT_PARTNERS: Partner[] = [
   { name: "Milstone", src: "/images/partners/milstone.svg", href: "#" },
   {
     name: "Nedap",
-    src: "/images/partners/Nedap N.V._idoJe-RWRK_1 1.svg",
+    src: "/images/partners/nedap.svg",
     href: "#",
   },
   {
     name: "NETSCOUT",
     src: "/images/partners/NETSCOUT_id9he3cBKz_1 1.svg",
     href: "#",
+    isLarge: true,
   },
   {
     name: "Orascom Telecom",
@@ -121,6 +130,7 @@ const WHITE_PARTNERS: Partner[] = [
     name: "Dormakaba",
     src: "/images/partners/V2/Dormakaba_idTpCNOBFD_1 3.svg",
     href: "#",
+    isLarge: true,
   },
   {
     name: "ELKA-Torantriebe",
@@ -128,11 +138,12 @@ const WHITE_PARTNERS: Partner[] = [
     href: "#",
   },
   { name: "F5", src: "/images/partners/V2/F5_Logo_0 3.svg", href: "#" },
-  { name: "Forcepoint", src: "/images/partners/V2/forcepoint.svg", href: "#" },
+  { name: "Forcepoint", src: "/images/partners/V2/forcepoint.svg", href: "#" , isLarge: true,},
   {
     name: "Fortinet",
     src: "/images/partners/V2/Fortinet_idZhbQEBqi_0 3.svg",
     href: "#",
+    isLarge: true,
   },
   {
     name: "Huawei",
@@ -271,8 +282,14 @@ function Logo({
       src={partner.src}
       alt={partner.name}
       className={
-        "h-8 w-auto  object-contain  " +
-        (section == "Hero" ? " md:h-10 transition grayscale" : " md:h-10 ")
+        " object-contain  " +
+        (partner.isLarge
+          ? section == "Hero"
+            ? " md:h-10  transition grayscale"
+            : " md:h-10 "
+          : section == "Hero"
+          ? " md:h-10 w-auto transition grayscale"
+          : " md:h-10 w-auto")
       }
       draggable={false}
       width={160}

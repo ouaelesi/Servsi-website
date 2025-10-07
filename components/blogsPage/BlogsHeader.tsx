@@ -17,14 +17,15 @@ export default function BlogsHeader() {
 
       <div className="relative mx-auto max-w-7xl px-6 py-16 md:px-10">
         {/* Heading */}
-        <div className="text-center md:w-2/3 mx-auto">
+        <div className="text-center md:w-8/10 mx-auto">
           <h2 className="text-balance text-4xl font-extrabold leading-tight tracking-tight md:text-5xl xl:text-6xl  ">
-            Expert insights & strategies for{" "}
-            <span className="text-primary">growth.</span>
+            Des conseils d'experts et des stratégies de{" "}
+            <span className="text-primary">croissance.</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-balance text-white/80">
-            Stay ahead with expert marketing tips, industry trends, and
-            actionable insights to scale and grow your business successfully.
+          <p className="mx-auto mt-4  text-balance text-white/80">
+            Gardez une longueur d'avance grâce aux conseils d'experts en
+            marketing, aux tendances du secteur et aux informations exploitables
+            pour faire évoluer et développer votre entreprise avec succès.
           </p>
         </div>
       </div>

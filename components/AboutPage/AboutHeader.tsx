@@ -41,7 +41,7 @@ export default function AboutHeader() {
           height={200}
           alt="servsi logo"
         />
-        <h2 className="text-balance text-4xl z-50  font-extrabold leading-tight tracking-tight md:text-5xl xl:text-6xl  ">
+        <h2 className="text-balance text-4xl z-50  font-extrabold leading-tight tracking-tight md:text-5xl xl:text-6xl md:max-w-8/10 mx-auto px-4">
           Là où{" "}
           <span className="text-primary">la vision rencontre l’expertise</span>,
           pour bâtir <span className="text-primary">le succès digital.</span>
