@@ -23,7 +23,7 @@ export default function BlogsHeader() {
             <span className="text-primary">croissance.</span>
           </h2>
           <p className="mx-auto mt-4  text-balance text-white/80">
-            Gardez une longueur d'avance grâce aux conseils d'experts en
+            Gardez une longueur d'avance grâce aux conseils d&apos;experts en
             marketing, aux tendances du secteur et aux informations exploitables
             pour faire évoluer et développer votre entreprise avec succès.
           </p>
