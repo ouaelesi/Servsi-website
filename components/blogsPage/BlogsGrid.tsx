@@ -17,7 +17,7 @@ const DEFAULT_POSTS: Post[] = [
     category: "Réseaux & Infrastructure",
     image: "/images/about1.jpg",
     href: "/blogs/creating-content-that-converts",
-  }
+  },
 ];
 
 export default function BlogGrid({
