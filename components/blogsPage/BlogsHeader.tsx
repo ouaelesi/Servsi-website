@@ -19,7 +19,7 @@ export default function BlogsHeader() {
         {/* Heading */}
         <div className="text-center md:w-8/10 mx-auto">
           <h2 className="text-balance text-4xl font-extrabold leading-tight tracking-tight md:text-5xl xl:text-6xl  ">
-            Des conseils d'experts et des stratégies de{" "}
+            Des conseils d&apos;experts et des stratégies de{" "}
             <span className="text-primary">croissance.</span>
           </h2>
           <p className="mx-auto mt-4  text-balance text-white/80">
