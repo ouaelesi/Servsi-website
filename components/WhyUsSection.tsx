@@ -1,6 +1,13 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import { Play, Shield, Sparkles, CheckCircle2, XCircle } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  Play,
+  Shield,
+  Sparkles,
+  CheckCircle2,
+  XCircle,
+  Pause,
+} from "lucide-react";
 import Image from "next/image";
 import {
   motion,
@@ -60,6 +67,8 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 export default function WhyUsSection() {
+  const [playing, setPlaying] = useState(false); // ⬅️ video state
+
   const negatives = [
     "Stratégies génériques et non personnalisées",
     "Focalisation sur des indicateurs superficiels",
@@ -77,7 +86,10 @@ export default function WhyUsSection() {
   ];
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#002329] text-white" id="work">
+    <section
+      className="relative isolate overflow-hidden bg-[#002329] text-white"
+      id="work"
+    >
       {/* background grid */}
       <div
         aria-hidden
@@ -118,13 +130,28 @@ export default function WhyUsSection() {
               aria-hidden
             />
             <div className="relative overflow-hidden rounded-[1.75rem]">
-              <Image
-                src="/images/aboutusPage.png"
-                alt="Réunion d'équipe"
-                className="block h-[420px] w-full object-cover md:h-[520px]"
-                width={1500}
-                height={1000}
-              />
+              {playing ? (
+                <div className="relative aspect-video w-full">
+                  <iframe
+                    className="absolute inset-0 h-full w-full"
+                    src="https://www.youtube.com/embed/ZmVIThP_HFs?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    loading="lazy"
+                   
+                  />
+                </div>
+              ) : (
+                <Image
+                  src="/images/aboutusPage.png"
+                  alt="Réunion d'équipe"
+                  className="block h-[420px] w-full object-cover md:h-[560px]"
+                  width={1500}
+                  height={1000}
+                  priority
+                />
+              )}
             </div>
 
             {/* Left badge (slides in) */}
@@ -178,11 +205,20 @@ export default function WhyUsSection() {
 
             {/* CTA */}
             <div className="absolute left-1/2 bottom-6 -translate-x-1/2">
-              <button className="cursor-pointer inline-flex min-w-[200px] items-center gap-2 rounded-full bg-primary px-5 py-3 text-xs font-medium text-black shadow-lg transition hover:brightness-95">
+              <button
+                onClick={() => setPlaying(!playing)}
+                className="cursor-pointer inline-flex  justify-center min-w-[200px] items-center gap-2 rounded-full bg-primary px-5 py-3 text-xs font-medium text-black shadow-lg transition hover:brightness-95"
+              >
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black">
-                  <Play className="h-4 w-4 text-primary" />
+                  {!playing ? (
+                    <Play className="h-4 w-4 text-primary" />
+                  ) : (
+                    <Pause className="h-4 w-4 text-primary" />
+                  )}
                 </span>
-                À l&apos;intérnieur de notre precessus
+                {!playing
+                  ? "À l'intérieur de notre processus"
+                  : "Pausez la vidéo"}
               </button>
             </div>
           </div>

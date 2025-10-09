@@ -118,7 +118,7 @@ export default function RecentArticles({
               type="submit"
               className="whitespace-nowrap cursor-pointer md:block hidden rounded-xl bg-primary px-5 py-3 font-medium text-black shadow ring-1 ring-emerald-500/40 transition hover:brightness-95"
             >
-              Abonner
+              Je m’abonne
             </button>
             <button
               type="submit"

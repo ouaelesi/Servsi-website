@@ -4,8 +4,6 @@ import "./globals.css";
 import FooterSection from "@/components/FooterSection";
 import Navbar from "@/components/NavBar";
 
-
-
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "700"], // Example weights
   subsets: ["latin"],
@@ -13,11 +11,10 @@ const montserrat = Montserrat({
   variable: "--font-montserrat", // Optional: for CSS variables
 });
 
-
-
 export const metadata: Metadata = {
-  title: "SERVSI - Your Trusted IT Partner",
-  description: "Empowering Your Business with Tailored IT Solutions",
+  title: "SERVSI - Solutions IT fiables pour votre entreprise",
+  description:
+    "De l’infrastructure réseau à la cybersécurité avancée, SERVSI accompagne la transformation digitale en Algérie avec des solutions IT innovantes, durables et sécurisées. En partenariat avec IT2S, nous offrons agilité, expertise et proximité pour bâtir un environnement numérique performant.",
 };
 
 export default function RootLayout({
@@ -27,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body   className={`${montserrat.variable}`}> 
+      <body className={`${montserrat.variable}`}>
         <Navbar />
         {children}
         <FooterSection />
