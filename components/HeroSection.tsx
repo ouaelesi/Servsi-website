@@ -5,6 +5,7 @@ import { Smile, Sparkles, Zap } from "lucide-react";
 import PartnersSlider from "./PartnersSlider";
 import Image from "next/image";
 import { motion, Variants, animate, useInView } from "framer-motion";
+import Link from "next/link";
 
 const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -104,12 +105,18 @@ export default function HeroSection() {
             className="flex gap-4"
             transition={{ delay: 0.05 }}
           >
-            <button className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-primary/20 px-4 py-3 text-md font-medium text-white shadow-lg transition hover:brightness-95 md:px-10 md:text-md">
+            <Link
+              href="/#services"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-primary/20 px-4 py-3 text-md font-medium text-white shadow-lg transition hover:brightness-95 md:px-10 md:text-md"
+            >
               Découvrir nos services
-            </button>
-            <button className="inline-flex cursor-pointer items-center gap-2 font-bold rounded-full bg-primary px-8 py-3 text-md  text-black shadow-lg transition hover:brightness-95 md:text-md">
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex cursor-pointer items-center gap-2 font-bold rounded-full bg-primary px-8 py-3 text-md  text-black shadow-lg transition hover:brightness-95 md:text-md"
+            >
               Passez au Digital
-            </button>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -201,9 +208,11 @@ export default function HeroSection() {
                         <span className="text-primary">
                           +<Counter to={100} />
                         </span>{" "}
-                        km de 
+                        km de
                       </span>
-                      <p className="text-sm font-medium text-white/80">Réseau réalisé</p>
+                      <p className="text-sm font-medium text-white/80">
+                        Réseau réalisé
+                      </p>
                     </div>
                   </div>
                 </div>
