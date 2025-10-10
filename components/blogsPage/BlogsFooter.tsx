@@ -88,18 +88,18 @@ export default function RecentArticles({
           </Link>
         ))}
       </div>
-      <div className="flex justify-between bg-foreground rounded-2xl p-12 gap-4 justify-items-center mt-16 flex-col md:flex-row md:items-center">
+      <div className="flex justify-between bg-foreground rounded-2xl md:p-12 sm:p-5 gap-4 justify-items-center mt-16 flex-col md:flex-row md:items-center">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-25"
           style={{
-            backgroundImage:
+            backgroundImage:    
               "linear-gradient(0deg, rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)",
             backgroundSize: "48px 48px",
             backgroundPosition: "-1px -1px",
           }}
         />
-        <div className="text-3xl font-semibold text-white/80 w-1/2">
+        <div className="md:text-3xl font-semibold text-white lg:w-1/2">
           Recevez les dernières mises à jour de la newsletter WriteClick.
         </div>
         <div>

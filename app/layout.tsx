@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import FooterSection from "@/components/FooterSection";
 import Navbar from "@/components/NavBar";
+import { Analytics } from "@vercel/analytics/next";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "700"], // Example weights
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.variable}`}>
+        <Analytics />
         <Navbar />
         {children}
         <FooterSection />

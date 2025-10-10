@@ -282,7 +282,7 @@ function Logo({
       src={partner.src}
       alt={partner.name}
       className={
-        " object-contain  " +
+        " object-contain h-10 " +
         (partner.isLarge
           ? section == "Hero"
             ? " md:h-10  transition grayscale"

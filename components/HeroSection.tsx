@@ -102,18 +102,19 @@ export default function HeroSection() {
 
           <motion.div
             variants={fadeUp}
-            className="flex gap-4"
+            className="flex  md:gap-4 sm:gap-2"
             transition={{ delay: 0.05 }}
           >
             <Link
               href="/#services"
-              className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-primary/20 px-4 py-3 text-md font-medium text-white shadow-lg transition hover:brightness-95 md:px-10 md:text-md"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-primary/20 px-3 py-3 text-xs md:text-sm font-medium text-white shadow-lg transition hover:brightness-95 md:px-10"
             >
               Découvrir nos services
             </Link>
+
             <Link
               href="/contact"
-              className="inline-flex cursor-pointer items-center gap-2 font-bold rounded-full bg-primary px-8 py-3 text-md  text-black shadow-lg transition hover:brightness-95 md:text-md"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-primary px-3 md:px-8 py-3 text-xs md:text-sm font-bold text-black shadow-lg transition hover:brightness-95"
             >
               Passez au Digital
             </Link>
